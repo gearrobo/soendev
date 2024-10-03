@@ -19,7 +19,7 @@
 			echo "device ditemukan";
 			$sql = "UPDATE device_sens SET value = '$value', updated_at = '$wktu' WHERE uid = '$api_uid' ";
 			if(mysqli_query($connection,$sql)){
-				$res = " INSERT INTO sens (device_send_id, value, created_at) VALUES ('$id_device','$value','$wktu') ";
+				$res = " INSERT INTO sens (device_id, value, created_at) VALUES ('$id_device','$value','$wktu') ";
 				if(mysqli_query($connection,$res)){
 					echo "Berhasil tambah";
 				}else{
