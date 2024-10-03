@@ -60,12 +60,20 @@
                             </tr>
                         </thead>
                         <tbody>
+                        <?php
+                            $query = "SELECT * FROM sens ORDER BY id DESC";
+                            $datas = $connection->query($query);
+                            foreach ($datas as $data) {
+                                # code...
+                            
+                        ?>
                             <tr>
                             <th scope="row">1</th>
                             <td><?= $device_name; ?> (<?= $lokasi; ?>)</td>
                             <td>Device <?= $status; ?></td>
                             <td><?= $created_at; ?></td>
                             </tr>
+                            <?php  } ?>
                         </tbody>
                     </table>
                 </div>
