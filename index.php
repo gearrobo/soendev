@@ -1,33 +1,5 @@
 <?php
     include 'connect.php';
-    $query = "SELECT * FROM sens ORDER BY id DESC";
-    echo "<b> <center>Database Output</center> </b> <br> <br>";
-
-    if ($result = $connection->query($query)) {
-        while ($row = $result->fetch_assoc()) {
-            $id_sens = $row['id'];
-            $data = $row['data'];
-            $created_at = $row['created_at'];
-            if ($data == 0) {
-                $status = "Online";
-            } elseif ($data == 1) {
-                $status = "Offline";
-            }
-        }
-    /*freeresultset*/
-    $result->free();
-    }
-
-    $query_sens = "SELECT * FROM device_sens WHERE id = $id_sens ";
-
-    if ($result_sens = $connection->query($query_sens)) {
-        while ($row_sens = $result_sens->fetch_assoc()) {
-            $device_name = $row_sens['nama_device'];
-            $lokasi = $row_sens['lokasi'];
-        }
-    /*freeresultset*/
-    $result_sens->free();
-    }
 ?>
 <!Doctype html>
 <html lang="en">
@@ -66,6 +38,7 @@
                             foreach ($datas as $data) {
                                 $id_sens = $data['id'];
                                 $device_id = $data['device_id'];
+                                $created_at = $data['created_at'];
                                 $value = $data['value'];
                                 if ($value == 0) {
                                     $status = "Online";
