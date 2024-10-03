@@ -5,7 +5,7 @@
 	$api_uid = $_GET["uid"];
 	$data=$_GET["data"];
 
-	$query_sens = "SELECT id FROM `device_sens` WHERE uid = 'abcdsoendev01' ";
+	$query_sens = "SELECT id FROM `device_sens` WHERE uid = $api_uid ";
 
 	if ($result_sens = $connection->query($query_sens)) {
 		while ($row_sens = $result_sens->fetch_assoc()) {
