@@ -1,12 +1,12 @@
 <?php
-   	include 'connect.php';
-	
+   	
 	$wktu = date("Y-m-d H:i:s");
 	$api_uid = $_GET['uid'];
 	$data = $_GET['data'];
 
 	echo $api_uid;
-
+	
+	include 'connect.php';
 	$query_sens = "SELECT * FROM device_sens WHERE uid=$api_uid";
 
 	if ($result_sens = $connection->query($query_sens)) {
