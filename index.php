@@ -13,7 +13,7 @@
             
             $query_sens = "SELECT * FROM device_sens WHERE 'id' = $id_sens ";
             if ($result_sens = $connection->query($query_sens)) {
-                while ($row = $result->fetch_assoc()) {
+                while ($row = $result_sens->fetch_assoc()) {
                     $device_name = $row['nama_device'];
                     $lokasi = $row['lokasi'];
                 }
