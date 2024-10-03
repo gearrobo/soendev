@@ -15,7 +15,10 @@
 	{
 		$uid_sens = $data['uid'];
 
-		echo "api_key".$uid_sens;
+		if ($api_uid == $uid_sens)
+		{
+			echo "device ditemukan";
+		}
 	}
 
 	// $query_sens = "SELECT * FROM device_sens WHERE uid=$api_uid";
