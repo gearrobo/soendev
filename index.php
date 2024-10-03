@@ -64,13 +64,14 @@
                             $query = "SELECT * FROM sens ORDER BY id DESC";
                             $datas = $connection->query($query);
                             foreach ($datas as $data) {
-                                # code...
+                                $id_sens = $data['id'];
+                                $device_id = $data['device_id'];
                             
                         ?>
                             <tr>
                             <th scope="row">1</th>
-                            <td><?= $device_name; ?> (<?= $lokasi; ?>)</td>
-                            <td>Device <?= $status; ?></td>
+                            <td><?= $device_id; ?></td>
+                            <td>Device </td>
                             <td><?= $created_at; ?></td>
                             </tr>
                             <?php  } ?>
