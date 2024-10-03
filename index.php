@@ -1,17 +1,24 @@
 <?php
     include 'connect.php';
-    $query = "SELECT * FROM device_sens";
+    $query = "SELECT * FROM sens ORDER BY id DESC";
     echo "<b> <center>Database Output</center> </b> <br> <br>";
 
     if ($result = $connection->query($query)) {
-
         while ($row = $result->fetch_assoc()) {
-            $field1name = $row["nama_device"];
-            $field2name = $row["lokasi"];
-
-            echo '<b>'.$field1name.$field2name.'</b><br />';
+            $id_sens = $row['id'];
+            $data = $row['data'];
+            $updated_at = $row['updated_at'];
+            
+            $query_sens = "SELECT * FROM device_sens WHERE 'id' = $id_sens ";
+            if ($result_sens = $connection->query($query)) {
+                while ($row = $result->fetch_assoc()) {
+                    $device_name = $row['nama_device'];
+                    $lokasi = $row['lokasi'];
+                }
+                /*freeresultset*/
+                $result_sens->free();
+            }
         }
-
     /*freeresultset*/
     $result->free();
     }
@@ -48,9 +55,9 @@
                         <tbody>
                             <tr>
                             <th scope="row">1</th>
-                            <td><?= $field1name; ?> (<?= $field2name; ?>)</td>
-                            <td>Otto</td>
-                            <td>@mdo</td>
+                            <td><?= $device_name; ?> (<?= $lokasi; ?>)</td>
+                            <td><?= $data; ?></td>
+                            <td><?= $updated_at; ?></td>
                             </tr>
                         </tbody>
                     </table>
