@@ -19,7 +19,6 @@
 	$result_sens->free();
 	}
 
-echo $id_device;
 
     // $result = "INSERT INTO sens (device_send_id, data, created_at)
     // VALUES ('$id_device', '$data', '$wktu')";
