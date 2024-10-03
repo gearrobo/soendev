@@ -1,4 +1,24 @@
-<!doctype html>
+<?php
+    $query = "SELECT * FROM sens";
+    echo "<b> <center>Database Output</center> </b> <br> <br>";
+
+    if ($result = $mysqli->query($query)) {
+
+        while ($row = $result->fetch_assoc()) {
+            $field1name = $row["data"];
+            $field2name = $row["updated_at"];
+
+            echo '<b>'.$field1name.$field2name.'</b><br />';
+            // echo $field5name.'<br />';
+            // echo $field5name.'<br />';
+            // echo $field5name;
+        }
+
+    /*freeresultset*/
+    $result->free();
+    }
+?>
+<!Doctype html>
 <html lang="en">
   <head>
     <!-- Required meta tags -->
