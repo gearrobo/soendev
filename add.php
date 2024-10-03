@@ -2,8 +2,10 @@
    	include("connect.php");
 	
 	$wktu = date("Y-m-d H:i:s");
-	$api_uid = $_GET["uid"];
-	$data=$_GET["data"];
+	$api_uid = $_GET['uid'];
+	$data = $_GET['data'];
+
+	echo $api_uid;
 
 	$query_sens = "SELECT id FROM `device_sens` WHERE uid = $api_uid ";
 
