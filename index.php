@@ -4,7 +4,7 @@
 	
 	$link=Connection();
 
-	$result=mysql_query("SELECT * FROM `sens` ORDER BY 'id' DESC",$link);
+	$result=mysql_query("SELECT * FROM 'sens' ORDER BY 'id' DESC",$link);
 ?>
 
 <html>
