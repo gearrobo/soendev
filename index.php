@@ -15,13 +15,13 @@
     $result->free();
     }
 
-    $query_sens = "SELECT * FROM device_sens WHERE 'id' = $id_sens ";
+    $query_sens = "SELECT * FROM device_sens WHERE 'id' = '1' ";
 
     if ($result_sens = $connection->query($query_sens)) {
         while ($row_sens = $result_sens->fetch_assoc()) {
             $device_name = $row_sens['nama_device'];
             $lokasi = $row_sens['lokasi'];
-            
+
             echo $device_name;
         }
     }
