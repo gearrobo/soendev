@@ -72,15 +72,19 @@
                                 } elseif ($value == 1) {
                                     $status = "Offline";
                                 }
-                            
+
+                                $query_sens = "SELECT * FROM device_sens WHERE id = $id_sens ";
+                                $dataDevs = $connection->query($query_sens);
+                                foreach ($dataDevs as $dataDev) {
+                                    $device_name = $dataDev['nama_device'];
                         ?>
                             <tr>
                             <th scope="row">1</th>
-                            <td><?= $device_id; ?></td>
+                            <td><?= $device_name; ?></td>
                             <td>Device <?= $status; ?></td>
                             <td><?= $created_at; ?></td>
                             </tr>
-                            <?php  } ?>
+                            <?php  }} ?>
                         </tbody>
                     </table>
                 </div>
