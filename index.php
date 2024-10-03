@@ -9,9 +9,9 @@
             $data = $row['data'];
             $updated_at = $row['updated_at'];
             if ($data == 0) {
-                $status = "Device Aktif";
+                $status = "Online";
             } elseif ($data == 1) {
-                $status = "Device Non Aktif";
+                $status = "Offline";
             }
         }
     /*freeresultset*/
@@ -62,7 +62,7 @@
                             <tr>
                             <th scope="row">1</th>
                             <td><?= $device_name; ?> (<?= $lokasi; ?>)</td>
-                            <td><?= $status; ?></td>
+                            <td>Device <?= $status; ?></td>
                             <td><?= $updated_at; ?></td>
                             </tr>
                         </tbody>
