@@ -5,7 +5,7 @@
 	$data = $_GET['data'];
 
 	echo $api_uid;
-	
+
 	include 'connect.php';
 	$query_sens = "SELECT * FROM device_sens WHERE uid=$api_uid";
 
@@ -18,6 +18,7 @@
 			echo $id_device;
 		}
 	/*freeresultset*/
+	$result_sens->free();
 	}
 
 
