@@ -15,7 +15,7 @@
 	{
 		$uid_sens = $data['uid'];
 
-		echo $uid_sens;
+		echo "api_key".$uid_sens;
 	}
 
 	// $query_sens = "SELECT * FROM device_sens WHERE uid=$api_uid";
