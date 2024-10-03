@@ -1,8 +1,9 @@
 <?php
+    include 'connect.php';
     $query = "SELECT * FROM sens";
     echo "<b> <center>Database Output</center> </b> <br> <br>";
 
-    if ($result = $mysqli->query($query)) {
+    if ($result = $mysqli->query($connection)) {
 
         while ($row = $result->fetch_assoc()) {
             $field1name = $row["data"];
