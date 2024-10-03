@@ -9,7 +9,7 @@
             $data = $row['data'];
             $updated_at = $row['updated_at'];
             
-            $query_sens = "SELECT * FROM device_sens WHERE 'id' = .'$id_sens'. ";
+            $query_sens = "SELECT * FROM device_sens WHERE 'id' = '1' ";
             if ($result_sens = $connection->query($query)) {
                 while ($row = $result->fetch_assoc()) {
                     $device_name = $row['nama_device'];
