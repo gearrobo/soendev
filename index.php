@@ -3,7 +3,7 @@
     $query = "SELECT * FROM sens";
     echo "<b> <center>Database Output</center> </b> <br> <br>";
 
-    if ($result = $mysqli->query($connection)) {
+    if ($result = $connection->query($query)) {
 
         while ($row = $result->fetch_assoc()) {
             $field1name = $row["data"];
