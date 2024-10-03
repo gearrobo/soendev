@@ -8,6 +8,8 @@
             $id_sens = $row['id'];
             $data = $row['data'];
             $updated_at = $row['updated_at'];
+
+            echo $id_sens;
             
             $query_sens = "SELECT * FROM device_sens WHERE 'id' = '1' ";
             if ($result_sens = $connection->query($query)) {
@@ -15,12 +17,10 @@
                     $device_name = $row['nama_device'];
                     $lokasi = $row['lokasi'];
                 }
-                /*freeresultset*/
-                $result_sens->free();
             }
         }
     /*freeresultset*/
-    $result->free();
+    // $result->free();
     }
 ?>
 <!Doctype html>
