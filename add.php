@@ -7,10 +7,12 @@
 	$api_uid = $_GET['uid'];
 	$value = $_GET['data'];
 
-	echo $api_uid;
+	// echo $api_uid;
 
-	$datas = "SELECT * FROM device_sens";
-	foreach ($datas as $data) {
+	$devicedb = "SELECT * FROM device_sens";
+	$datas = $connection->query($devicedb);
+	foreach ($datas as $data) 
+	{
 		$uid_sens = $data['uid'];
 
 		echo $uid_sens;
