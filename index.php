@@ -8,8 +8,11 @@
             $id_sens = $row['id'];
             $data = $row['data'];
             $updated_at = $row['updated_at'];
-
-            echo $id_sens;
+            if ($data == 0) {
+                $status = "Device Aktif";
+            } elseif ($data == 1) {
+                $status = "Device Non Aktif";
+            }
         }
     /*freeresultset*/
     $result->free();
@@ -21,9 +24,9 @@
         while ($row_sens = $result_sens->fetch_assoc()) {
             $device_name = $row_sens['nama_device'];
             $lokasi = $row_sens['lokasi'];
-
-            echo $device_name;
         }
+    /*freeresultset*/
+    $result_sens->free();
     }
 ?>
 <!Doctype html>
@@ -51,7 +54,7 @@
                             <tr>
                             <th scope="col">#</th>
                             <th scope="col">Device</th>
-                            <th scope="col">Value</th>
+                            <th scope="col">Status</th>
                             <th scope="col">Time</th>
                             </tr>
                         </thead>
@@ -59,7 +62,7 @@
                             <tr>
                             <th scope="row">1</th>
                             <td><?= $device_name; ?> (<?= $lokasi; ?>)</td>
-                            <td><?= $data; ?></td>
+                            <td><?= $status; ?></td>
                             <td><?= $updated_at; ?></td>
                             </tr>
                         </tbody>
