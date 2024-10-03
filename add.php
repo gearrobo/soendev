@@ -2,8 +2,9 @@
    	include("connect.php");
 	$api_uid = $_GET["uid"];
 	$data=$_GET["data"];
-	
+
 	echo $api_uid;
+	echo "<br>";
 	echo $data;
 
 	$query_sens = "SELECT * FROM device_sens ";
