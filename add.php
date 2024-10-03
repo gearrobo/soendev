@@ -1,15 +1,15 @@
 <?php
    	include("connect.php");
+
+	$data=$_GET["data"];
+
+	echo $data;
+
+	// $query = "INSERT INTO 'sens' ('data', 'updated_at') 
+	// 	VALUES ('".$data."','".$waktu."')"; 
    	
-   	$link=Connection();
+   	// mysql_query($query,$link);
+	// mysql_close($link);
 
-	$data=$_POST["data"];
-
-	$query = "INSERT INTO 'sens' ('data', 'updated_at') 
-		VALUES ('".$data."','".$waktu."')"; 
-   	
-   	mysql_query($query,$link);
-	mysql_close($link);
-
-   	header("Location: index.php");
+   	// header("Location: index.php");
 ?>
