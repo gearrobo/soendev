@@ -9,6 +9,7 @@
 
 	if ($result_sens = $connection->query($query_sens)) {
 		while ($row_sens = $result_sens->fetch_assoc()) {
+			
 			$device_name = $row_sens['nama_device'];
 			$uid_sens = $row_sens['uid'];
 			$id_device = $row_sens['id'];
