@@ -77,6 +77,7 @@
                                 $dataDevs = $connection->query($query_sens);
                                 foreach ($dataDevs as $dataDev) {
                                     $device_name = $dataDev['nama_device'];
+                                }
                         ?>
                             <tr>
                             <th scope="row">1</th>
@@ -84,7 +85,7 @@
                             <td>Device <?= $status; ?></td>
                             <td><?= $created_at; ?></td>
                             </tr>
-                            <?php  }} ?>
+                            <?php  }?>
                         </tbody>
                     </table>
                 </div>
