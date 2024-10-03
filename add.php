@@ -2,7 +2,6 @@
    	include("connect.php");
 
 	$data=$_GET["data"];
-
 	echo $data;
 
 	// $query = "INSERT INTO 'sens' ('data', 'updated_at') 
