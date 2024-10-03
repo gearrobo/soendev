@@ -14,10 +14,22 @@
 	foreach ($datas as $data) 
 	{
 		$uid_sens = $data['uid'];
+		$id_device = $data['id'];
 
 		if ($api_uid == $uid_sens)
 		{
 			echo "device ditemukan";
+			$sql = "UPDATE device_sens SET value = '$value', updated_at = '$wktu' WHERE uid = '$api_uid' ";
+			if(mysqli_query($conn,$sql)){
+				$res = " INSERT INTO sens (device_send_id, value, created_at) VALUES ('$id_device','$value','$wktu') ";
+				if(mysqli_query($conn,$res)){
+					echo "Berhasil tambah";
+				}else{
+					echo "gagal tambah";
+				}
+			}else{
+				echo "gagal update";
+			}
 		}
 	}
 
@@ -48,4 +60,5 @@
     // }
 
    	// header("Location: index.php");
+	$connection -> close();
 ?>
