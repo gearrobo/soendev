@@ -5,7 +5,7 @@
 	$api_uid = $_GET["uid"];
 	$data=$_GET["data"];
 
-	$query_sens = "SELECT * FROM device_sens WHERE 'uid' = '$api_uid' ";
+	$query_sens = "SELECT * FROM device_sens WHERE 'uid' = $api_uid ";
 
 	if ($result_sens = $connection->query($query_sens)) {
 		while ($row_sens = $result_sens->fetch_assoc()) {
@@ -21,8 +21,8 @@
 
 
 
-    // $result = "INSERT INTO sens (data, created_at)
-    // VALUES ('$data', '$wktu')";
+    // $result = "INSERT INTO sens (device_send_id, data, created_at)
+    // VALUES ('$id_device', '$data', '$wktu')";
 
     // if(mysqli_query($conn,$result)){
     //     echo '
