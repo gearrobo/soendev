@@ -1,19 +1,16 @@
 <?php
 
-	function Connection(){
-		$server="localhost";
-		$user="soey7928_monsis";
-		$pass="adminit2024";
-		$db="soey7928_satkomproject";
-	   	
-		$connection = mysql_connect($server, $user, $pass);
+    $servername = "localhost";
+    $username = "soey7928_monsis";
+    $password = "adminit2024";
+    $db="soey7928_satkomproject";
 
-		if (!$connection) {
-	    	die('MySQL ERROR: ' . mysql_error());
-		}
-		
-		mysql_select_db($db) or die( 'MySQL ERROR: '. mysql_error() );
+    // Create connection
+    $conn = new mysqli($servername, $username, $password, $db);
 
-		return $connection;
-	}
+    // Check connection
+    if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+    }
+    echo "Connected successfully";
 ?>
