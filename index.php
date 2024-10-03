@@ -40,7 +40,7 @@
                         <thead>
                             <tr>
                             <th scope="col">#</th>
-                            <th scope="col">Device</th>
+                            <th scope="col"><?= $field1name; ?></th>
                             <th scope="col">Value</th>
                             <th scope="col">Time</th>
                             </tr>
