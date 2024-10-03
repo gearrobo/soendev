@@ -66,12 +66,18 @@
                             foreach ($datas as $data) {
                                 $id_sens = $data['id'];
                                 $device_id = $data['device_id'];
+                                $value = $data['value'];
+                                if ($value == 0) {
+                                    $status = "Online";
+                                } elseif ($value == 1) {
+                                    $status = "Offline";
+                                }
                             
                         ?>
                             <tr>
                             <th scope="row">1</th>
                             <td><?= $device_id; ?></td>
-                            <td>Device </td>
+                            <td>Device <?= $status; ?></td>
                             <td><?= $created_at; ?></td>
                             </tr>
                             <?php  } ?>
