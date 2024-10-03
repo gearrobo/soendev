@@ -7,7 +7,7 @@
         while ($row = $result->fetch_assoc()) {
             $id_sens = $row['id'];
             $data = $row['data'];
-            $updated_at = $row['updated_at'];
+            $created_at = $row['created_at'];
             if ($data == 0) {
                 $status = "Online";
             } elseif ($data == 1) {
@@ -63,7 +63,7 @@
                             <th scope="row">1</th>
                             <td><?= $device_name; ?> (<?= $lokasi; ?>)</td>
                             <td>Device <?= $status; ?></td>
-                            <td><?= $updated_at; ?></td>
+                            <td><?= $created_at; ?></td>
                             </tr>
                         </tbody>
                     </table>
