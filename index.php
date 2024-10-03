@@ -1,18 +1,15 @@
 <?php
     include 'connect.php';
-    $query = "SELECT * FROM sens";
+    $query = "SELECT * FROM device_sens";
     echo "<b> <center>Database Output</center> </b> <br> <br>";
 
     if ($result = $connection->query($query)) {
 
         while ($row = $result->fetch_assoc()) {
-            $field1name = $row["data"];
-            $field2name = $row["updated_at"];
+            $field1name = $row["nama_device"];
+            $field2name = $row["lokasi"];
 
             echo '<b>'.$field1name.$field2name.'</b><br />';
-            // echo $field5name.'<br />';
-            // echo $field5name.'<br />';
-            // echo $field5name;
         }
 
     /*freeresultset*/
