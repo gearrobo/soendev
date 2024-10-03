@@ -15,7 +15,7 @@
     $result->free();
     }
 
-    $query_sens = "SELECT * FROM device_sens WHERE 'id' = '1' ";
+    $query_sens = "SELECT * FROM device_sens WHERE id = '1' ";
 
     if ($result_sens = $connection->query($query_sens)) {
         while ($row_sens = $result_sens->fetch_assoc()) {
