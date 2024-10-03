@@ -3,11 +3,10 @@
    	
    	$link=Connection();
 
-	$data_1=$_POST["data1"];
-	$data_2=$_POST["data2"];
+	$data=$_POST["data"];
 
-	$query = "INSERT INTO `device_sens` (`data_1`, `data_2`) 
-		VALUES ('".$data_1."','".$data_2."')"; 
+	$query = "INSERT INTO 'sens' ('data', 'updated_at') 
+		VALUES ('".$data."','".$waktu."')"; 
    	
    	mysql_query($query,$link);
 	mysql_close($link);
