@@ -13,9 +13,9 @@
             
             $query_sens = "SELECT * FROM device_sens WHERE 'id' = $id_sens ";
             if ($result_sens = $connection->query($query_sens)) {
-                while ($row = $result_sens->fetch_assoc()) {
-                    $device_name = $row['nama_device'];
-                    $lokasi = $row['lokasi'];
+                while ($row_sens = $result_sens->fetch_assoc()) {
+                    $device_name = $row_sens['nama_device'];
+                    $lokasi = $row_sens['lokasi'];
                 }
             }
         }
