@@ -46,7 +46,7 @@
                                     $status = "Offline";
                                 }
 
-                                $query_sens = "SELECT * FROM device_sens WHERE id = $id_sens ";
+                                $query_sens = "SELECT * FROM device_sens WHERE id = $device_id ";
                                 $dataDevs = $connection->query($query_sens);
                                 foreach ($dataDevs as $dataDev) {
                                     $device_name = $dataDev['nama_device'];
