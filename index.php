@@ -28,6 +28,8 @@
                             <th scope="col">#</th>
                             <th scope="col">Device</th>
                             <th scope="col">Status</th>
+                            <th scope="col">Suhu</th>
+                            <th scope="col">Kelembaban</th>
                             <th scope="col">Time</th>
                             </tr>
                         </thead>
@@ -38,6 +40,8 @@
                             foreach ($datas as $data) {
                                 $id_sens = $data['id'];
                                 $device_id = $data['device_id'];
+                                $suhu = $data['suhu'];
+                                $kelembaban = $data['kelembaban'];
                                 $created_at = $data['created_at'];
                                 $value = $data['status'];
                                 if ($value == 0) {
@@ -56,6 +60,8 @@
                             <th scope="row">1</th>
                             <td><?= $device_name; ?></td>
                             <td>Device <?= $status; ?></td>
+                            <td><?= $suhu; ?></td>
+                            <td><?= $kelembaban; ?></td>
                             <td><?= $created_at; ?></td>
                             </tr>
                             <?php  }?>
