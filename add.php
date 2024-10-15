@@ -8,7 +8,7 @@
 	$status = $_GET['status'];
 	$suhu = $_GET['suhu'];
 	$kelembaban = $_GET['kelembaban'];
-	$wakir = $_GET['wakir'];
+	$wakir = $_GET['waktu'];
 
 
 	echo $serialnumber."<br>";
