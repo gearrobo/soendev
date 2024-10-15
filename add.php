@@ -4,8 +4,10 @@
    	date_default_timezone_set('Asia/Jakarta');
 	$wktu = date("Y-m-d H:i:s");
 
-	$api_uid = $_GET['uid'];
-	$value = $_GET['data'];
+	$serialnumber = $_GET['serialnumber'];
+	$status = $_GET['status'];
+	$suhu = $_GET['suhu'];
+	$kelembaban = $_GET['kelembaban'];
 
 	$devicedb = "SELECT * FROM device_sens";
 	$datas = $connection->query($devicedb);
@@ -16,17 +18,17 @@
 
 		if ($api_uid == $uid_sens)
 		{
-			// echo "device ditemukan";
-			$sql = "UPDATE device_sens SET value = '$value', updated_at = '$wktu' WHERE uid = '$api_uid' ";
+			echo "device ditemukan";
+			$sql = "UPDATE device_sens SET value = '$status', updated_at = '$wktu' WHERE uid = '$serialnumber' ";
 			if(mysqli_query($connection,$sql)){
-				$res = " INSERT INTO sens (device_id, value, created_at) VALUES ('$id_device','$value','$wktu') ";
+				$res = " INSERT INTO sens (device_id, status, suhu, kelembaban, created_at) VALUES ('$id_device','$status','$suhu','$kelembaban','$wktu') ";
 				if(mysqli_query($connection,$res)){
-					// echo "Berhasil tambah";
+					echo "Berhasil tambah";
 				}else{
-					// echo "gagal tambah";
+					echo "gagal tambah";
 				}
 			}else{
-				// echo "gagal update";
+				echo "gagal update";
 			}
 		}
 	}
