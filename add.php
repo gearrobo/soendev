@@ -9,7 +9,7 @@
 	$suhu = $_GET['suhu'];
 	$kelembaban = $_GET['kelembaban'];
 
-	echo $serialnumber;
+	echo $serialnumber."<br>";
 
 	$devicedb = "SELECT * FROM device_sens";
 	$datas = $connection->query($devicedb);
@@ -20,18 +20,18 @@
 
 		if ($serialnumber == $uid_sens)
 		{
-			echo "device ditemukan";
-	// 		$sql = "UPDATE device_sens SET value = '$status', updated_at = '$wktu' WHERE uid = '$serialnumber' ";
-	// 		if(mysqli_query($connection,$sql)){
-	// 			$res = " INSERT INTO sens (device_id, status, suhu, kelembaban, created_at) VALUES ('$id_device','$status','$suhu','$kelembaban','$wktu') ";
-	// 			if(mysqli_query($connection,$res)){
-	// 				echo "Berhasil tambah";
-	// 			}else{
-	// 				echo "gagal tambah";
-	// 			}
-	// 		}else{
-	// 			echo "gagal update";
-	// 		}
+			echo "device ditemukan <br>";
+			$sql = "UPDATE device_sens SET value = '$status', updated_at = '$wktu' WHERE uid = '$serialnumber' ";
+			if(mysqli_query($connection,$sql)){
+				$res = " INSERT INTO sens (device_id, status, suhu, kelembaban, created_at) VALUES ('$id_device','$status','$suhu','$kelembaban','$wktu') ";
+				if(mysqli_query($connection,$res)){
+					echo "Berhasil tambah";
+				}else{
+					echo "gagal tambah";
+				}
+			}else{
+				echo "gagal update";
+			}
 		}
 	}
 
