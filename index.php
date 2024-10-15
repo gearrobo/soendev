@@ -42,7 +42,7 @@
                                 $device_id = $data['device_id'];
                                 $suhu = $data['suhu'];
                                 $kelembaban = $data['kelembaban'];
-                                $created_at = $data['created_at'];
+                                $wktuu = $data['waktu_kirim'];
                                 $value = $data['status'];
                                 if ($value == 0) {
                                     $status = "Online";
@@ -62,7 +62,7 @@
                             <td>Device <?= $status; ?></td>
                             <td><?= $suhu; ?></td>
                             <td><?= $kelembaban; ?></td>
-                            <td><?= $created_at; ?></td>
+                            <td><?= $wktuu; ?></td>
                             </tr>
                             <?php  }?>
                         </tbody>
