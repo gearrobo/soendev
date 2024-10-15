@@ -39,7 +39,7 @@
                                 $id_sens = $data['id'];
                                 $device_id = $data['device_id'];
                                 $created_at = $data['created_at'];
-                                $value = $data['value'];
+                                $value = $data['status'];
                                 if ($value == 0) {
                                     $status = "Online";
                                 } elseif ($value == 1) {
