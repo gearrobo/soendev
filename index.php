@@ -46,8 +46,10 @@
                                 $value = $data['status'];
                                 if ($value == 0) {
                                     $status = "Online";
+                                    $colorbg = "bg-success";
                                 } elseif ($value == 1) {
                                     $status = "Offline";
+                                    $colorbg = "bg-danger";
                                 }
 
                                 $query_sens = "SELECT * FROM device_sens WHERE id = $device_id ";
@@ -59,7 +61,7 @@
                             <tr>
                             <th scope="row">1</th>
                             <td><?= $device_name; ?></td>
-                            <td>Device <?= $status; ?></td>
+                            <td class="<?= $colorbg; ?>">Device <?= $status; ?></td>
                             <td><?= $suhu; ?></td>
                             <td><?= $kelembaban; ?></td>
                             <td><?= $wktuu; ?></td>
