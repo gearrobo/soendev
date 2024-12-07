@@ -44,8 +44,8 @@
       <a href="index.html" class="d-flex align-items-center me-auto me-xl-0">
         <!-- Uncomment the line below if you also wish to use an image logo -->
         <!-- <img src="assets/img/logo.png" alt=""> -->
-        <!-- <h1 class="sitename">SOENDEV</h1><span>.</span> -->
-        <img src="assets/img/soendev-navbar-white.png" alt="soendev-navbar" width="350" height="90">
+        <h1 class="sitename">SOENDEV</h1><span>.</span>
+        {{-- <img src="assets/img/soendev-navbar-white.png" alt="soendev-navbar" width="350" height="90"> --}}
       </a>
 
       <nav id="navmenu" class="navmenu">
