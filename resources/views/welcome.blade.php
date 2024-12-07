@@ -48,20 +48,6 @@
         {{-- <img src="assets/img/soendev-navbar-white.png" alt="soendev-navbar" width="350" height="90"> --}}
       </a>
 
-      <nav id="navmenu" class="navmenu">
-        <ul>
-          <li><a href="index.html#hero" class="active">Home</a></li>
-          <li><a href="index.html#about">About</a></li>
-          <li><a href="index.html#services">Services</a></li>
-          <li><a href="index.html#portfolio">Portfolio</a></li>
-          <!-- <li><a href="index.html#pricing">Pricing</a></li> -->
-          <li><a href="index.html#team">Team</a></li>
-          <li><a href="blog.html">Blog</a></li>
-          <li><a href="index.html#contact">Contact</a></li>
-        </ul>
-        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
-      </nav>
-
       <a class="btn-getstarted" href="index.html#about"><h6>Join Us</h6></a>
 
     </div>
@@ -79,14 +65,6 @@
             <div class="col-lg-10">
               <h2 data-aos="fade-up" data-aos-delay="100">Welcome to Our Website</h2>
               <p data-aos="fade-up" data-aos-delay="200">Sorry we are under maintenance!</p>
-            </div>
-            <div class="col-lg-5" data-aos="fade-up" data-aos-delay="300">
-              <form action="forms/newsletter.php" method="post" class="php-email-form">
-                <div class="sign-up-form"><input type="email" name="email"><input type="submit" value="Subscribe"></div>
-                <div class="loading">Loading</div>
-                <div class="error-message"></div>
-                <div class="sent-message">Your subscription request has been sent. Thank you!</div>
-              </form>
             </div>
           </div>
         </div>
