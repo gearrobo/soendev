@@ -48,6 +48,9 @@
         {{-- <img src="assets/img/soendev-navbar-white.png" alt="soendev-navbar" width="350" height="90"> --}}
       </a>
 
+      <nav id="navmenu" class="navmenu">
+      </nav>
+
       <a class="btn-getstarted" href="index.html#about"><h6>Join Us</h6></a>
 
     </div>
