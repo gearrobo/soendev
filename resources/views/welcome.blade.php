@@ -7,6 +7,6 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <h1>Maaf Web Sedang Maintenance</h1>
 </body>
 </html>
