@@ -632,7 +632,7 @@
             <div class="single-team-member">
               <div class="team-img">
                 <a href="#">
-										<img src="img/team/1.jpg" alt="">
+										<img src="assets/img/team/1.jpg" alt="">
 									</a>
                 <div class="team-social-icon text-center">
                   <ul>
@@ -665,7 +665,7 @@
             <div class="single-team-member">
               <div class="team-img">
                 <a href="#">
-										<img src="img/team/2.jpg" alt="">
+										<img src="assets/img/team/2.jpg" alt="">
 									</a>
                 <div class="team-social-icon text-center">
                   <ul>
@@ -698,7 +698,7 @@
             <div class="single-team-member">
               <div class="team-img">
                 <a href="#">
-										<img src="img/team/3.jpg" alt="">
+										<img src="assets/img/team/3.jpg" alt="">
 									</a>
                 <div class="team-social-icon text-center">
                   <ul>
@@ -731,7 +731,7 @@
             <div class="single-team-member">
               <div class="team-img">
                 <a href="#">
-										<img src="img/team/4.jpg" alt="">
+										<img src="assets/img/team/4.jpg" alt="">
 									</a>
                 <div class="team-social-icon text-center">
                   <ul>
@@ -771,7 +771,7 @@
     <div class="work-us">
       <div class="work-left-text">
         <a href="#">
-						<img src="img/about/2.jpg" alt="">
+						<img src="assets/img/about/2.jpg" alt="">
 					</a>
       </div>
       <div class="work-right-text text-center">
@@ -820,10 +820,10 @@
           <div class="col-md-4 col-sm-4 col-xs-12 design development">
             <div class="single-awesome-project">
               <div class="awesome-img">
-                <a href="#"><img src="img/portfolio/1.jpg" alt="" /></a>
+                <a href="#"><img src="assets/img/portfolio/1.jpg" alt="" /></a>
                 <div class="add-actions text-center">
                   <div class="project-dec">
-                    <a class="venobox" data-gall="myGallery" href="img/portfolio/1.jpg">
+                    <a class="venobox" data-gall="myGallery" href="assets/img/portfolio/1.jpg">
                       <h4>Business City</h4>
                       <span>Web Development</span>
                     </a>
@@ -837,10 +837,10 @@
           <div class="col-md-4 col-sm-4 col-xs-12 photo">
             <div class="single-awesome-project">
               <div class="awesome-img">
-                <a href="#"><img src="img/portfolio/2.jpg" alt="" /></a>
+                <a href="#"><img src="assets/img/portfolio/2.jpg" alt="" /></a>
                 <div class="add-actions text-center">
                   <div class="project-dec">
-                    <a class="venobox" data-gall="myGallery" href="img/portfolio/2.jpg">
+                    <a class="venobox" data-gall="myGallery" href="assets/img/portfolio/2.jpg">
                       <h4>Blue Sea</h4>
                       <span>Photosho</span>
                     </a>
@@ -854,10 +854,10 @@
           <div class="col-md-4 col-sm-4 col-xs-12 design">
             <div class="single-awesome-project">
               <div class="awesome-img">
-                <a href="#"><img src="img/portfolio/3.jpg" alt="" /></a>
+                <a href="#"><img src="assets/img/portfolio/3.jpg" alt="" /></a>
                 <div class="add-actions text-center">
                   <div class="project-dec">
-                    <a class="venobox" data-gall="myGallery" href="img/portfolio/3.jpg">
+                    <a class="venobox" data-gall="myGallery" href="assets/img/portfolio/3.jpg">
                       <h4>Beautiful Nature</h4>
                       <span>Web Design</span>
                     </a>
@@ -871,10 +871,10 @@
           <div class="col-md-4 col-sm-4 col-xs-12 photo development">
             <div class="single-awesome-project">
               <div class="awesome-img">
-                <a href="#"><img src="img/portfolio/4.jpg" alt="" /></a>
+                <a href="#"><img src="assets/img/portfolio/4.jpg" alt="" /></a>
                 <div class="add-actions text-center">
                   <div class="project-dec">
-                    <a class="venobox" data-gall="myGallery" href="img/portfolio/4.jpg">
+                    <a class="venobox" data-gall="myGallery" href="assets/img/portfolio/4.jpg">
                       <h4>Creative Team</h4>
                       <span>Web design</span>
                     </a>
@@ -888,10 +888,10 @@
           <div class="col-md-4 col-sm-4 col-xs-12 development">
             <div class="single-awesome-project">
               <div class="awesome-img">
-                <a href="#"><img src="img/portfolio/5.jpg" alt="" /></a>
+                <a href="#"><img src="assets/img/portfolio/5.jpg" alt="" /></a>
                 <div class="add-actions text-center text-center">
                   <div class="project-dec">
-                    <a class="venobox" data-gall="myGallery" href="img/portfolio/5.jpg">
+                    <a class="venobox" data-gall="myGallery" href="assets/img/portfolio/5.jpg">
                       <h4>Beautiful Flower</h4>
                       <span>Web Development</span>
                     </a>
@@ -905,10 +905,10 @@
           <div class="col-md-4 col-sm-4 col-xs-12 design photo">
             <div class="single-awesome-project">
               <div class="awesome-img">
-                <a href="#"><img src="img/portfolio/6.jpg" alt="" /></a>
+                <a href="#"><img src="assets/img/portfolio/6.jpg" alt="" /></a>
                 <div class="add-actions text-center">
                   <div class="project-dec">
-                    <a class="venobox" data-gall="myGallery" href="img/portfolio/6.jpg">
+                    <a class="venobox" data-gall="myGallery" href="assets/img/portfolio/6.jpg">
                       <h4>Night Hill</h4>
                       <span>Photoshop</span>
                     </a>
