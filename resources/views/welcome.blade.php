@@ -286,7 +286,7 @@
                 Licensing information: https://bootstrapmade.com/license/
                 Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=eBusiness
               -->
-              Designed by <a href="https://soendev.com/">soendev</a>
+              Content by <a href="https://soendev.com/">soendev</a>
             </div>
           </div>
         </div>
