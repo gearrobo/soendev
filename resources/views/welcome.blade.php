@@ -8,8 +8,8 @@
   <meta content="" name="description">
 
   <!-- Favicons -->
-  <link href="assets/" rel="icon">
-  <link href="assets/" rel="apple-touch-icon">
+  <link href="assets/img/soendev.png" rel="icon">
+  <link href="assets/img/soendev.png" rel="apple-touch-icon">
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,600,700|Raleway:300,400,400i,500,500i,700,800,900" rel="stylesheet">
