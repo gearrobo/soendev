@@ -96,9 +96,9 @@
                     </ul> 
                   </li>
 
-                  <li>
+                  {{-- <li>
                     <a class="page-scroll" href="#blog">Blog</a>
-                  </li>
+                  </li> --}}
                   <li>
                     <a class="page-scroll" href="#contact">Contact</a>
                   </li>
