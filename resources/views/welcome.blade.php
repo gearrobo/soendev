@@ -65,9 +65,9 @@
 									</button>
                 <!-- Brand -->
                 <a class="navbar-brand page-scroll sticky-logo" href="/">
-                  {{-- <h1>So<span>e</span>ndev</h1> --}}
+                  <h1>So<span>e</span>ndev</h1>
                   <!-- Uncomment below if you prefer to use an image logo -->
-                  <img src="{{ asset('assets/img/logo.png') }}" alt="" title=""> 
+                  {{-- <img src="{{ asset('assets/img/logo.png') }}" alt="" title="">  --}}
 								</a>
               </div>
               <!-- Collect the nav links, forms, and other content for toggling -->
