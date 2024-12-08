@@ -244,9 +244,9 @@
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
                 </p>
                 <div class="footer-contacts">
-                  <p><span>Tel:</span> +123 456 789</p>
-                  <p><span>Email:</span> contact@example.com</p>
-                  <p><span>Working Hours:</span> 9am-5pm</p>
+                  <p><span>Tel:</span> +62 0851 7898 9087</p>
+                  <p><span>Email:</span> soendev.adm@gmail.com</p>
+                  <p><span>Working Hours:</span> 10am-5pm</p>
                 </div>
               </div>
             </div>
