@@ -215,7 +215,7 @@
                   <h2>So<span>e</span>ndev</h2>
                 </div>
 
-                <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis.</p>
+                <p>Perusahaan IT Software Engineering Development adalah organisasi modern yang fokus pada pengembangan perangkat lunak inovatif. Dengan tim profesional, lingkungan kerja futuristik, dan teknologi canggih, perusahaan ini menciptakan solusi digital berkualitas tinggi melalui kolaborasi dan kreativitas.</p>
                 <div class="footer-icons">
                   <ul>
                     <li>
