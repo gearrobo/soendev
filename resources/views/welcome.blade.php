@@ -8,31 +8,31 @@
   <meta content="" name="description">
 
   <!-- Favicons -->
-  <link href="assets/img/soendev.png" rel="icon">
-  <link href="assets/img/soendev.png" rel="apple-touch-icon">
+  <link href="{{ asset('assets/img/soendev.png') }}" rel="icon">
+  <link href="{{ asset('assets/img/soendev.png') }}" rel="apple-touch-icon">
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,600,700|Raleway:300,400,400i,500,500i,700,800,900" rel="stylesheet">
 
   <!-- Bootstrap CSS File -->
-  <link href="assets/lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="{{ asset('assets/lib/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
 
   <!-- Libraries CSS Files -->
-  <link href="assets/lib/nivo-slider/css/nivo-slider.css" rel="stylesheet">
-  <link href="assets/lib/owlcarousel/owl.carousel.css" rel="stylesheet">
-  <link href="assets/lib/owlcarousel/owl.transitions.css" rel="stylesheet">
-  <link href="assets/lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
-  <link href="assets/lib/animate/animate.min.css" rel="stylesheet">
-  <link href="assets/lib/venobox/venobox.css" rel="stylesheet">
+  <link href="{{ asset('assets/lib/nivo-slider/css/nivo-slider.css') }}" rel="stylesheet">
+  <link href="{{ asset('assets/lib/owlcarousel/owl.carousel.css') }}" rel="stylesheet">
+  <link href="{{ asset('assets/lib/owlcarousel/owl.transitions.css') }}" rel="stylesheet">
+  <link href="{{ asset('assets/lib/font-awesome/css/font-awesome.min.css') }}" rel="stylesheet">
+  <link href="{{ asset('assets/lib/animate/animate.min.css') }}" rel="stylesheet">
+  <link href="{{ asset('assets/lib/venobox/venobox.css') }}" rel="stylesheet">
 
   <!-- Nivo Slider Theme -->
-  <link href="assets/css/nivo-slider-theme.css" rel="stylesheet">
+  <link href="{{ asset('assets/css/nivo-slider-theme.css') }}" rel="stylesheet">
 
   <!-- Main Stylesheet File -->
-  <link href="assets/css/style.css" rel="stylesheet">
+  <link href="{{ asset('assets/css/style.css') }}" rel="stylesheet">
 
   <!-- Responsive Stylesheet File -->
-  <link href="assets/css/responsive.css" rel="stylesheet">
+  <link href="{{ asset('assets/css/responsive.css') }}" rel="stylesheet">
 
   <!-- =======================================================
     Theme Name: eBusiness
@@ -119,9 +119,9 @@
   <div id="home" class="slider-area">
     <div class="bend niceties preview-2">
       <div id="ensign-nivoslider" class="slides">
-        <img src="assets/img/slider/slider1.jpg" alt="" title="#slider-direction-1" />
-        <img src="assets/img/slider/slider2.jpg" alt="" title="#slider-direction-2" />
-        <img src="assets/img/slider/slider3.jpg" alt="" title="#slider-direction-3" />
+        <img src="{{ asset('assets/img/slider/slider1.jpg') }}" alt="" title="#slider-direction-1" />
+        <img src="{{ asset('assets/img/slider/slider2.jpg') }}" alt="" title="#slider-direction-2" />
+        <img src="{{ asset('assets/img/slider/slider3.jpg') }}" alt="" title="#slider-direction-3" />
       </div>
 
       <!-- direction 1 -->
@@ -218,7 +218,7 @@
           <div class="well-left">
             <div class="single-well">
               <a href="#">
-								  <img src="assets/img/about/1.jpg" alt="">
+								  <img src="{{ asset('assets/img/about/1.jpg') }}" alt="">
 								</a>
             </div>
           </div>
@@ -632,7 +632,7 @@
             <div class="single-team-member">
               <div class="team-img">
                 <a href="#">
-										<img src="assets/img/team/1.jpg" alt="">
+										<img src="{{ asset('assets/img/team/1.jpg') }}" alt="">
 									</a>
                 <div class="team-social-icon text-center">
                   <ul>
@@ -665,7 +665,7 @@
             <div class="single-team-member">
               <div class="team-img">
                 <a href="#">
-										<img src="assets/img/team/2.jpg" alt="">
+										<img src="{{ asset('assets/img/team/2.jpg') }}" alt="">
 									</a>
                 <div class="team-social-icon text-center">
                   <ul>
@@ -698,7 +698,7 @@
             <div class="single-team-member">
               <div class="team-img">
                 <a href="#">
-										<img src="assets/img/team/3.jpg" alt="">
+										<img src="{{ asset('assets/img/team/3.jpg') }}" alt="">
 									</a>
                 <div class="team-social-icon text-center">
                   <ul>
@@ -731,7 +731,7 @@
             <div class="single-team-member">
               <div class="team-img">
                 <a href="#">
-										<img src="assets/img/team/4.jpg" alt="">
+										<img src="{{ asset('assets/img/team/4.jpg') }}" alt="">
 									</a>
                 <div class="team-social-icon text-center">
                   <ul>
@@ -771,7 +771,7 @@
     <div class="work-us">
       <div class="work-left-text">
         <a href="#">
-						<img src="assets/img/about/2.jpg" alt="">
+						<img src="{{ asset('assets/img/about/2.jpg') }}" alt="">
 					</a>
       </div>
       <div class="work-right-text text-center">
@@ -820,10 +820,10 @@
           <div class="col-md-4 col-sm-4 col-xs-12 design development">
             <div class="single-awesome-project">
               <div class="awesome-img">
-                <a href="#"><img src="assets/img/portfolio/1.jpg" alt="" /></a>
+                <a href="#"><img src="{{ asset('assets/img/portfolio/1.jpg') }}" alt="" /></a>
                 <div class="add-actions text-center">
                   <div class="project-dec">
-                    <a class="venobox" data-gall="myGallery" href="assets/img/portfolio/1.jpg">
+                    <a class="venobox" data-gall="myGallery" href="{{ asset('assets/img/portfolio/1.jpg') }}">
                       <h4>Business City</h4>
                       <span>Web Development</span>
                     </a>
@@ -837,10 +837,10 @@
           <div class="col-md-4 col-sm-4 col-xs-12 photo">
             <div class="single-awesome-project">
               <div class="awesome-img">
-                <a href="#"><img src="assets/img/portfolio/2.jpg" alt="" /></a>
+                <a href="#"><img src="{{ asset('assets/img/portfolio/2.jpg') }}" alt="" /></a>
                 <div class="add-actions text-center">
                   <div class="project-dec">
-                    <a class="venobox" data-gall="myGallery" href="assets/img/portfolio/2.jpg">
+                    <a class="venobox" data-gall="myGallery" href="{{ asset('assets/img/portfolio/2.jpg') }}">
                       <h4>Blue Sea</h4>
                       <span>Photosho</span>
                     </a>
@@ -854,10 +854,10 @@
           <div class="col-md-4 col-sm-4 col-xs-12 design">
             <div class="single-awesome-project">
               <div class="awesome-img">
-                <a href="#"><img src="assets/img/portfolio/3.jpg" alt="" /></a>
+                <a href="#"><img src="{{ asset('assets/img/portfolio/3.jpg') }}" alt="" /></a>
                 <div class="add-actions text-center">
                   <div class="project-dec">
-                    <a class="venobox" data-gall="myGallery" href="assets/img/portfolio/3.jpg">
+                    <a class="venobox" data-gall="myGallery" href="{{ asset('assets/img/portfolio/3.jpg') }}">
                       <h4>Beautiful Nature</h4>
                       <span>Web Design</span>
                     </a>
@@ -871,10 +871,10 @@
           <div class="col-md-4 col-sm-4 col-xs-12 photo development">
             <div class="single-awesome-project">
               <div class="awesome-img">
-                <a href="#"><img src="assets/img/portfolio/4.jpg" alt="" /></a>
+                <a href="#"><img src="{{ asset('assets/img/portfolio/4.jpg') }}" alt="" /></a>
                 <div class="add-actions text-center">
                   <div class="project-dec">
-                    <a class="venobox" data-gall="myGallery" href="assets/img/portfolio/4.jpg">
+                    <a class="venobox" data-gall="myGallery" href="{{ asset('assets/img/portfolio/4.jpg') }}">
                       <h4>Creative Team</h4>
                       <span>Web design</span>
                     </a>
@@ -888,10 +888,10 @@
           <div class="col-md-4 col-sm-4 col-xs-12 development">
             <div class="single-awesome-project">
               <div class="awesome-img">
-                <a href="#"><img src="assets/img/portfolio/5.jpg" alt="" /></a>
+                <a href="#"><img src="{{ asset('assets/img/portfolio/5.jpg') }}" alt="" /></a>
                 <div class="add-actions text-center text-center">
                   <div class="project-dec">
-                    <a class="venobox" data-gall="myGallery" href="assets/img/portfolio/5.jpg">
+                    <a class="venobox" data-gall="myGallery" href="{{ asset('assets/img/portfolio/5.jpg') }}">
                       <h4>Beautiful Flower</h4>
                       <span>Web Development</span>
                     </a>
@@ -905,10 +905,10 @@
           <div class="col-md-4 col-sm-4 col-xs-12 design photo">
             <div class="single-awesome-project">
               <div class="awesome-img">
-                <a href="#"><img src="assets/img/portfolio/6.jpg" alt="" /></a>
+                <a href="#"><img src="{{ asset('assets/img/portfolio/6.jpg') }}" alt="" /></a>
                 <div class="add-actions text-center">
                   <div class="project-dec">
-                    <a class="venobox" data-gall="myGallery" href="assets/img/portfolio/6.jpg">
+                    <a class="venobox" data-gall="myGallery" href="{{ asset('assets/img/portfolio/6.jpg') }}">
                       <h4>Night Hill</h4>
                       <span>Photoshop</span>
                     </a>
@@ -1214,12 +1214,12 @@
               <div class="footer-head">
                 <h4>Instagram</h4>
                 <div class="flicker-img">
-                  <a href="#"><img src="assets/img/portfolio/1.jpg" alt=""></a>
-                  <a href="#"><img src="assets/img/portfolio/2.jpg" alt=""></a>
-                  <a href="#"><img src="assets/img/portfolio/3.jpg" alt=""></a>
-                  <a href="#"><img src="assets/img/portfolio/4.jpg" alt=""></a>
-                  <a href="#"><img src="assets/img/portfolio/5.jpg" alt=""></a>
-                  <a href="#"><img src="assets/img/portfolio/6.jpg" alt=""></a>
+                  <a href="#"><img src="{{ asset('assets/img/portfolio/1.jpg') }}" alt=""></a>
+                  <a href="#"><img src="{{ asset('assets/img/portfolio/2.jpg') }}" alt=""></a>
+                  <a href="#"><img src="{{ asset('assets/img/portfolio/3.jpg') }}" alt=""></a>
+                  <a href="#"><img src="{{ asset('assets/img/portfolio/4.jpg') }}" alt=""></a>
+                  <a href="#"><img src="{{ asset('assets/img/portfolio/5.jpg') }}" alt=""></a>
+                  <a href="#"><img src="{{ asset('assets/img/portfolio/6.jpg') }}" alt=""></a>
                 </div>
               </div>
             </div>
@@ -1254,22 +1254,22 @@
   <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
 
   <!-- JavaScript Libraries -->
-  <script src="assets/lib/jquery/jquery.min.js"></script>
-  <script src="assets/lib/bootstrap/js/bootstrap.min.js"></script>
-  <script src="assets/lib/owlcarousel/owl.carousel.min.js"></script>
-  <script src="assets/lib/venobox/venobox.min.js"></script>
-  <script src="assets/lib/knob/jquery.knob.js"></script>
-  <script src="assets/lib/wow/wow.min.js"></script>
-  <script src="assets/lib/parallax/parallax.js"></script>
-  <script src="assets/lib/easing/easing.min.js"></script>
-  <script src="assets/lib/nivo-slider/js/jquery.nivo.slider.js" type="text/javascript"></script>
-  <script src="assets/lib/appear/jquery.appear.js"></script>
-  <script src="assets/lib/isotope/isotope.pkgd.min.js"></script>
+  <script src="{{ asset('assets/lib/jquery/jquery.min.js') }}"></script>
+  <script src="{{ asset('assets/lib/bootstrap/js/bootstrap.min.js') }}"></script>
+  <script src="{{ asset('assets/lib/owlcarousel/owl.carousel.min.js') }}"></script>
+  <script src="{{ asset('assets/lib/venobox/venobox.min.js') }}"></script>
+  <script src="{{ asset('assets/lib/knob/jquery.knob.js') }}"></script>
+  <script src="{{ asset('assets/lib/wow/wow.min.js') }}"></script>
+  <script src="{{ asset('assets/lib/parallax/parallax.js') }}"></script>
+  <script src="{{ asset('assets/lib/easing/easing.min.js') }}"></script>
+  <script src="{{ asset('assets/lib/nivo-slider/js/jquery.nivo.slider.js') }}" type="text/javascript"></script>
+  <script src="{{ asset('assets/lib/appear/jquery.appear.js') }}"></script>
+  <script src="{{ asset('assets/lib/isotope/isotope.pkgd.min.js') }}"></script>
 
   <!-- Contact Form JavaScript File -->
-  <script src="assets/contactform/contactform.js"></script>
+  <script src="{{ asset('assets/contactform/contactform.js') }}"></script>
 
-  <script src="assets/js/main.js"></script>
+  <script src="{{ asset('assets/js/main.js') }}"></script>
 </body>
 
 </html>
