@@ -13,6 +13,7 @@
     </style>
 
 @section('content')
+<br><br><br><br><br><br><br><br><br><br>
 <h1>Sensor Locations</h1>
     <div id="map"></div>
 
