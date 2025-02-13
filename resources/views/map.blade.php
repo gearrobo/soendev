@@ -1,5 +1,8 @@
-@extends('template.home')
-
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Monitoring Sistem</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
     <style>
         #map { height: 550px; }
         marker.bindPopup('
@@ -11,14 +14,12 @@
             </div>
         ');
     </style>
+</head>
+<body>
+    <h1>Sensor Locations</h1>
+    <div id="map"></div>
 
-@section('content')
-    <div class="card-body">
-        <h1>Sensor Locations</h1>
-        <div id="map"></div>
-    </div>
-
-<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
     <script>
         // Inisialisasi peta
         var map = L.map('map').setView([-6.3000, 106.8166], 11); // Set view ke lokasi default
@@ -50,4 +51,5 @@
             })
             .catch(error => console.error('Error fetching sensorData data:', error));
     </script>
-@endsection
+</body>
+</html>
