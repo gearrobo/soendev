@@ -13,11 +13,15 @@
     </style>
 
 @section('content')
-<br><br><br><br><br><br><br><br><br><br>
-<h1>Sensor Locations</h1>
-    <div id="map"></div>
+    <div class="card-body">
+        <h1>Sensor Locations</h1>
+        <div id="map"></div>
+    </div>
+@endsection
 
-    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+@section('script')
+
+<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
     <script>
         // Inisialisasi peta
         var map = L.map('map').setView([-6.3000, 106.8166], 11); // Set view ke lokasi default
