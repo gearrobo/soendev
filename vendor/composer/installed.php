@@ -10,6 +10,24 @@
         'dev' => true,
     ),
     'versions' => array(
+        'alexpechkarev/geometry-library' => array(
+            'pretty_version' => '1.0.5',
+            'version' => '1.0.5.0',
+            'reference' => '35839ed841805c8a0bc2fd8e4d5b5f600cb1416a',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../alexpechkarev/geometry-library',
+            'aliases' => array(),
+            'dev_requirement' => false,
+        ),
+        'alexpechkarev/google-maps' => array(
+            'pretty_version' => 'v11.0.0',
+            'version' => '11.0.0.0',
+            'reference' => '88df5dcef891e14af635a3737336318cd54d4486',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../alexpechkarev/google-maps',
+            'aliases' => array(),
+            'dev_requirement' => false,
+        ),
         'brick/math' => array(
             'pretty_version' => '0.12.1',
             'version' => '0.12.1.0',
@@ -370,6 +388,15 @@
                 0 => 'v11.34.2',
             ),
         ),
+        'jbroadway/urlify' => array(
+            'pretty_version' => '1.2.4-stable',
+            'version' => '1.2.4.0',
+            'reference' => 'd0fafbaa1dc14e8039cdf5c72a932a8d1de1750e',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../jbroadway/urlify',
+            'aliases' => array(),
+            'dev_requirement' => false,
+        ),
         'kodova/hamcrest-php' => array(
             'dev_requirement' => true,
             'replaced' => array(
@@ -429,6 +456,15 @@
             'install_path' => __DIR__ . '/../laravel/sail',
             'aliases' => array(),
             'dev_requirement' => true,
+        ),
+        'laravel/sanctum' => array(
+            'pretty_version' => 'v4.0.8',
+            'version' => '4.0.8.0',
+            'reference' => 'ec1dd9ddb2ab370f79dfe724a101856e0963f43c',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../laravel/sanctum',
+            'aliases' => array(),
+            'dev_requirement' => false,
         ),
         'laravel/serializable-closure' => array(
             'pretty_version' => 'v2.0.0',
@@ -1280,6 +1316,15 @@
             'reference' => 'b1d923f88091c6bf09699efcd7c8a1b1bfd7351d',
             'type' => 'library',
             'install_path' => __DIR__ . '/../voku/portable-ascii',
+            'aliases' => array(),
+            'dev_requirement' => false,
+        ),
+        'voku/stop-words' => array(
+            'pretty_version' => '2.0.1',
+            'version' => '2.0.1.0',
+            'reference' => '8e63c0af20f800b1600783764e0ce19e53969f71',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../voku/stop-words',
             'aliases' => array(),
             'dev_requirement' => false,
         ),
