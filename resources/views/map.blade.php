@@ -1,55 +1,5 @@
-{{-- @extends('template.home')
+@extends('template.home')
 
-<style>
-    .text-center {
-        text-align: center;
-    }
-    #map {
-        height: 400px;
-        width: 100%;
-    }
-</style>
-
-@section('content')
-    <h1 class="text-center">Laravel Google Maps</h1>
-    <div id="map"></div>
-@endsection
-
-@section('scripts')
-    <script>
-        let map, activeInfoWindow, markers = [];
-
-        function initMap() {
-            map = new google.maps.Map(document.getElementById("map"), {
-                center: {
-                    lat: 28.626137,
-                    lng: 79.821603
-                },
-                zoom: 15
-            });
-
-            // Add markers from initialMarkers array
-            initialMarkers.forEach((markerData) => {
-                let marker = new google.maps.Marker({
-                    position: markerData.position,
-                    map: map,
-                    label: markerData.label,
-                    draggable: markerData.draggable
-                });
-
-                markers.push(marker);
-            });
-        }
-    </script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap" async defer></script>
-@endsection --}}
-
-
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Monitoring Sistem</title>
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
     <style>
         #map { height: 550px; }
         marker.bindPopup('
@@ -61,9 +11,9 @@
             </div>
         ');
     </style>
-</head>
-<body>
-    <h1>Sensor Locations</h1>
+
+@section('content')
+<h1>Sensor Locations</h1>
     <div id="map"></div>
 
     <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
@@ -98,5 +48,4 @@
             })
             .catch(error => console.error('Error fetching sensorData data:', error));
     </script>
-</body>
-</html>
+@endsection
