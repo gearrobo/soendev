@@ -47,7 +47,7 @@
                 </li>
 
                 <li>
-                  <a class="page-scroll" href="/iot">IoT</a>
+                  <a class="page-scroll" href="/map">IoT</a>
                 </li>
                 <li>
                   <a class="page-scroll" href="#contact">Contact</a>
