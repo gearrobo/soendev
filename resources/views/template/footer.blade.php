@@ -35,12 +35,12 @@
               <div class="footer-head">
                 <h4>information</h4>
                 <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
+                  Hubungi kami untuk kebutuhan Informasi dan Kerjasama 
                 </p>
                 <div class="footer-contacts">
                   <p><span>Tel:</span> +62 0851 7898 9087</p>
                   <p><span>Email:</span> soendev.adm@gmail.com</p>
-                  <p><span>Working Hours:</span> 10am-5pm</p>
+                  <p><span>Working Hours:</span> 10am-4pm</p>
                 </div>
               </div>
             </div>
