@@ -59,8 +59,8 @@
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
     <style>
         #map { 
-            height: 550px; 
-            
+            height: 80vh; 
+
         }
         marker.bindPopup('
             <div style="font-family: Arial, sans-serif;">
