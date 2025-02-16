@@ -34,7 +34,6 @@
   <script src="{{ asset('assets/contactform/contactform.js') }}"></script>
 
   <script src="{{ asset('assets/js/main.js') }}"></script>
-  <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap" async></script>
 
   @yield('scripts')
 </body>

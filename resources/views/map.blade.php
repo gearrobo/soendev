@@ -59,7 +59,7 @@
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
     <style>
         #map { 
-            height: 80vh; 
+            height: 100vh;
 
         }
         marker.bindPopup('
