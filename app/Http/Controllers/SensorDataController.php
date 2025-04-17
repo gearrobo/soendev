@@ -29,7 +29,7 @@ class SensorDataController extends Controller
     public function showMap()
     {
         $sensorData = SensorData::all();
-        return view('map', compact('sensorData'));      
+        return view('sensors.map', compact('sensorData'));      
     }
     public function destroy($id)
     {
