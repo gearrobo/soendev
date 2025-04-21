@@ -92,7 +92,7 @@
       <div class="row">
         <div class="col-md-12 col-sm-12 col-xs-12">
           <div class="section-headline text-center">
-            <h2>About </h2><h2>So<span>e</span>ndev</h2>
+            <h2>About Sondev</h2>
           </div>
         </div>
       </div>
@@ -112,26 +112,26 @@
           <div class="well-middle">
             <div class="single-well">
               <a href="#">
-                <h4 class="sec-head">project Maintenance</h4>
+                <h4 class="sec-head"></h4>
               </a>
               <p>
-                Redug Lagre dolor sit amet, consectetur adipisicing elit. Itaque quas officiis iure aspernatur sit adipisci quaerat unde at nequeRedug Lagre dolor sit amet, consectetur adipisicing elit. Itaque quas officiis iure
+              Perusahaan IT Software Engineering Development adalah organisasi modern yang fokus pada pengembangan perangkat lunak inovatif. Dengan tim profesional, lingkungan kerja futuristik, dan teknologi canggih, perusahaan ini menciptakan solusi digital berkualitas tinggi melalui kolaborasi dan kreativitas.
               </p>
               <ul>
                 <li>
-                  <i class="fa fa-check"></i> Interior design Package
+                  <i class="fa fa-check"></i> Building Management System
                 </li>
                 <li>
-                  <i class="fa fa-check"></i> Building House
+                  <i class="fa fa-check"></i> Smart Home System
                 </li>
                 <li>
-                  <i class="fa fa-check"></i> Reparing of Residentail Roof
+                  <i class="fa fa-check"></i> Software Development Apps, Website others
                 </li>
                 <li>
-                  <i class="fa fa-check"></i> Renovaion of Commercial Office
+                  <i class="fa fa-check"></i> Telemetry IoT Robotic Industry Solution
                 </li>
                 <li>
-                  <i class="fa fa-check"></i> Make Quality Products
+                  <i class="fa fa-check"></i> Education Program
                 </li>
               </ul>
             </div>
