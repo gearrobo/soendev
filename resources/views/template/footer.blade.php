@@ -9,7 +9,7 @@
                   <h2>So<span>e</span>ndev</h2>
                 </div>
 
-                <p>Perusahaan IT Software Engineering Development adalah organisasi modern yang fokus pada pengembangan perangkat lunak inovatif. Dengan tim profesional, lingkungan kerja futuristik, dan teknologi canggih, perusahaan ini menciptakan solusi digital berkualitas tinggi melalui kolaborasi dan kreativitas.</p>
+                <p>An IT Software Engineering Development company is a modern organization focused on developing innovative software solutions</p>
                 <div class="footer-icons">
                   <ul>
                     <li>
@@ -35,7 +35,7 @@
               <div class="footer-head">
                 <h4>information</h4>
                 <p>
-                  Hubungi kami untuk kebutuhan Informasi dan Kerjasama 
+                  Contact us for information and collaboration opportunities.
                 </p>
                 <div class="footer-contacts">
                   <p><span>Tel:</span> +62 0851 7898 9087</p>

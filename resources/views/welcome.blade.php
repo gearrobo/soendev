@@ -115,7 +115,7 @@
                 <h4 class="sec-head"></h4>
               </a>
               <p>
-              Perusahaan IT Software Engineering Development adalah organisasi modern yang fokus pada pengembangan perangkat lunak inovatif. Dengan tim profesional, lingkungan kerja futuristik, dan teknologi canggih, perusahaan ini menciptakan solusi digital berkualitas tinggi melalui kolaborasi dan kreativitas.
+              An IT Software Engineering Development company is a modern organization focused on developing innovative software solutions. With a team of professionals, a futuristic work environment, and advanced technology, the company delivers high-quality digital solutions through collaboration and creativity.
               </p>
               <ul>
                 <li>
@@ -142,4 +142,180 @@
     </div>
   </div>
   <!-- End About area -->
+
+  <!-- Start Service area -->
+  <div id="services" class="services-area area-padding">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 col-sm-12 col-xs-12">
+          <div class="section-headline services-head text-center">
+            <h2>Our Services</h2>
+          </div>
+        </div>
+      </div>
+      <div class="row text-center">
+        <div class="services-contents">
+          <!-- Start Left services -->
+          <div class="col-md-4 col-sm-4 col-xs-12">
+            <div class="about-move">
+              <div class="services-details">
+                <div class="single-services">
+                  <a class="services-icon" href="#">
+											<i class="fa fa-code"></i>
+										</a>
+                  <h4>Mobile App Development</h4>
+                  <p>
+                  From concept to deployment, we create user-friendly mobile applications for iOS and Android platforms.
+                  </p>
+                </div>
+              </div>
+              <!-- end about-details -->
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-4 col-xs-12">
+            <div class="about-move">
+              <div class="services-details">
+                <div class="single-services">
+                  <a class="services-icon" href="#">
+                    <i class="fa fa-bolt"></i>
+										</a>
+                  <h4>PLC and Electric Developer</h4>
+                  <p>
+                    will have to make sure the prototype looks finished by inserting text or photo.make sure the prototype looks finished by.
+                  </p>
+                </div>
+              </div>
+              <!-- end about-details -->
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-4 col-xs-12">
+            <!-- end col-md-4 -->
+            <div class=" about-move">
+              <div class="services-details">
+                <div class="single-services">
+                  <a class="services-icon" href="#">
+											<i class="fa fa-wordpress"></i>
+										</a>
+                  <h4>Wordpress Developer</h4>
+                  <p>
+                    will have to make sure the prototype looks finished by inserting text or photo.make sure the prototype looks finished by.
+                  </p>
+                </div>
+              </div>
+              <!-- end about-details -->
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-4 col-xs-12">
+            <!-- end col-md-4 -->
+            <div class=" about-move">
+              <div class="services-details">
+                <div class="single-services">
+                  <a class="services-icon" href="#">
+											<i class="fa fa-industry"></i>
+										</a>
+                  <h4>IoT Solutions Development</h4>
+                  <p>
+                  We build smart IoT systems that connect devices, sensors, and data to enable real-time monitoring, automation, and analytics.
+                  </p>
+                </div>
+              </div>
+              <!-- end about-details -->
+            </div>
+          </div>
+          <!-- End Left services -->
+          <div class="col-md-4 col-sm-4 col-xs-12">
+            <!-- end col-md-4 -->
+            <div class=" about-move">
+              <div class="services-details">
+                <div class="single-services">
+                  <a class="services-icon" href="#">
+											<i class="fa fa-bar-chart"></i>
+										</a>
+                  <h4>Web Application Development</h4>
+                  <p>
+                  We deliver responsive, secure, and high-performing web applications that support your business growth.
+                  </p>
+                </div>
+              </div>
+              <!-- end about-details -->
+            </div>
+          </div>
+          <!-- End Left services -->
+          <div class="col-md-4 col-sm-4 col-xs-12">
+            <!-- end col-md-4 -->
+            <div class=" about-move">
+              <div class="services-details">
+                <div class="single-services">
+                  <a class="services-icon" href="#">
+											<i class="fa fa-ticket"></i>
+										</a>
+                  <h4>Maintenance & Support</h4>
+                  <p>
+                  We provide continuous support and maintenance services to keep your systems running smoothly and up to date.
+                  </p>
+                </div>
+              </div>
+              <!-- end about-details -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- End Service area -->
+
+   <!-- our-skill-area start -->
+   <div class="our-skill-area fix hidden-sm">
+    <div class="test-overly"></div>
+    <div class="skill-bg area-padding-2">
+      <div class="container">
+        <!-- section-heading end -->
+        <div class="row">
+          <div class="skill-text">
+            <!-- single-skill start -->
+            <div class="col-xs-12 col-sm-3 col-md-3 text-center">
+              <div class="single-skill">
+                <div class="progress-circular">
+                  <input type="text" class="knob" value="0" data-rel="95" data-linecap="round" data-width="175" data-bgcolor="#fff" data-fgcolor="#3EC1D5" data-thickness=".20" data-readonly="true" disabled>
+                  <h3 class="progress-h4">Web Design</h3>
+                </div>
+              </div>
+            </div>
+            <!-- single-skill end -->
+            <!-- single-skill start -->
+            <div class="col-xs-12 col-sm-3 col-md-3 text-center">
+              <div class="single-skill">
+                <div class="progress-circular">
+                  <input type="text" class="knob" value="0" data-rel="85" data-linecap="round" data-width="175" data-bgcolor="#fff" data-fgcolor="#3EC1D5" data-thickness=".20" data-readonly="true" disabled>
+                  <h3 class="progress-h4">Graphics Design</h3>
+                </div>
+              </div>
+            </div>
+            <!-- single-skill end -->
+            <!-- single-skill start -->
+            <div class="col-xs-12 col-sm-3 col-md-3 text-center">
+              <div class="single-skill">
+                <div class="progress-circular">
+                  <input type="text" class="knob" value="0" data-rel="75" data-linecap="round" data-width="175" data-bgcolor="#fff" data-fgcolor="#3EC1D5" data-thickness=".20" data-readonly="true" disabled>
+                  <h3 class="progress-h4">Php Developer</h3>
+                </div>
+              </div>
+            </div>
+            <!-- single-skill end -->
+            <!-- single-skill start -->
+            <div class="col-xs-12 col-sm-3 col-md-3 text-center">
+              <div class="single-skill">
+                <div class="progress-circular">
+                  <input type="text" class="knob" value="0" data-rel="65" data-linecap="round" data-width="175" data-bgcolor="#fff" data-fgcolor="#3EC1D5" data-thickness=".20" data-readonly="true" disabled>
+                  <h3 class="progress-h4">Java Script</h3>
+                </div>
+              </div>
+            </div>
+            <!-- single-skill end -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- our-skill-area end -->
 @endsection
