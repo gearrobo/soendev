@@ -287,7 +287,7 @@
               <div class="single-skill">
                 <div class="progress-circular">
                   <input type="text" class="knob" value="0" data-rel="85" data-linecap="round" data-width="175" data-bgcolor="#fff" data-fgcolor="#3EC1D5" data-thickness=".20" data-readonly="true" disabled>
-                  <h3 class="progress-h4">Graphics Design</h3>
+                  <h3 class="progress-h4">IoT Developer</h3>
                 </div>
               </div>
             </div>
