@@ -38,7 +38,7 @@
                   Contact us for information and collaboration opportunities.
                 </p>
                 <div class="footer-contacts">
-                  <p><span>Tel:</span> +62 0851 7898 9087</p>
+                  <p><span>Tel:</span> +62 896 1692 4259</p>
                   <p><span>Email:</span> soendev.adm@gmail.com</p>
                   <p><span>Working Hours:</span> 10am-4pm</p>
                 </div>
