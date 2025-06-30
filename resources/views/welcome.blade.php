@@ -318,4 +318,125 @@
     </div>
   </div>
   <!-- our-skill-area end -->
+
+  <!-- Start Client area -->
+  <div id="clients" class="services-area area-padding">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 col-sm-12 col-xs-12">
+          <div class="section-headline services-head text-center">
+            <h2>Our Services</h2>
+          </div>
+        </div>
+      </div>
+      <div class="row text-center">
+        <div class="services-contents">
+          <!-- Start Left services -->
+          <div class="col-md-4 col-sm-4 col-xs-12">
+            <div class="about-move">
+              <div class="services-details">
+                <div class="single-services">
+                  <a class="services-icon" href="#">
+											<i class="fa fa-code"></i>
+										</a>
+                  <h4>Mobile App Development</h4>
+                  <p>
+                  From concept to deployment, we create user-friendly mobile applications for iOS and Android platforms.
+                  </p>
+                </div>
+              </div>
+              <!-- end about-details -->
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-4 col-xs-12">
+            <div class="about-move">
+              <div class="services-details">
+                <div class="single-services">
+                  <a class="services-icon" href="#">
+                    <i class="fa fa-bolt"></i>
+										</a>
+                  <h4>PLC and Electric Developer</h4>
+                  <p>
+                    will have to make sure the prototype looks finished by inserting text or photo.make sure the prototype looks finished by.
+                  </p>
+                </div>
+              </div>
+              <!-- end about-details -->
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-4 col-xs-12">
+            <!-- end col-md-4 -->
+            <div class=" about-move">
+              <div class="services-details">
+                <div class="single-services">
+                  <a class="services-icon" href="#">
+											<i class="fa fa-wordpress"></i>
+										</a>
+                  <h4>Wordpress Developer</h4>
+                  <p>
+                    will have to make sure the prototype looks finished by inserting text or photo.make sure the prototype looks finished by.
+                  </p>
+                </div>
+              </div>
+              <!-- end about-details -->
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-4 col-xs-12">
+            <!-- end col-md-4 -->
+            <div class=" about-move">
+              <div class="services-details">
+                <div class="single-services">
+                  <a class="services-icon" href="#">
+											<i class="fa fa-industry"></i>
+										</a>
+                  <h4>IoT Solutions Development</h4>
+                  <p>
+                  We build smart IoT systems that connect devices, sensors, and data to enable real-time monitoring, automation, and analytics.
+                  </p>
+                </div>
+              </div>
+              <!-- end about-details -->
+            </div>
+          </div>
+          <!-- End Left services -->
+          <div class="col-md-4 col-sm-4 col-xs-12">
+            <!-- end col-md-4 -->
+            <div class=" about-move">
+              <div class="services-details">
+                <div class="single-services">
+                  <a class="services-icon" href="#">
+											<i class="fa fa-bar-chart"></i>
+										</a>
+                  <h4>Web Application Development</h4>
+                  <p>
+                  We deliver responsive, secure, and high-performing web applications that support your business growth.
+                  </p>
+                </div>
+              </div>
+              <!-- end about-details -->
+            </div>
+          </div>
+          <!-- End Left services -->
+          <div class="col-md-4 col-sm-4 col-xs-12">
+            <!-- end col-md-4 -->
+            <div class=" about-move">
+              <div class="services-details">
+                <div class="single-services">
+                  <a class="services-icon" href="#">
+											<i class="fa fa-ticket"></i>
+										</a>
+                  <h4>Maintenance & Support</h4>
+                  <p>
+                  We provide continuous support and maintenance services to keep your systems running smoothly and up to date.
+                  </p>
+                </div>
+              </div>
+              <!-- end about-details -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- End Clinet area -->
 @endsection
