@@ -26,7 +26,7 @@
                 <li class="active">
                   <a class="page-scroll" href="#home">Home</a>
                 </li>
-                <!-- <li>
+                <li>
                   <a class="page-scroll" href="#about">About</a>
                 </li>
                 <li>
@@ -37,7 +37,7 @@
                 </li>
                 <li>
                   <a class="page-scroll" href="#portfolio">Portfolio</a>
-                </li> -->
+                </li>
                 <li>
                   <a class="page-scroll" href="/map">IoT</a>
                 </li>
