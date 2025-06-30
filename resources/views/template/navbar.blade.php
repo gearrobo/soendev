@@ -39,6 +39,9 @@
                   <a class="page-scroll" href="#portfolio">Portfolio</a>
                 </li>
                 <li>
+                  <a class="page-scroll" href="#clients">Clients</a>
+                </li>
+                <li>
                   <a class="page-scroll" href="/map">IoT</a>
                 </li>
                 <!-- <li>
