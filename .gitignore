@@ -8,6 +8,8 @@
 /storage/pail
 /vendor
 vendor
+.vendor
+./vendor
 /vendor/autoload.php
 .env
 .env.backup
