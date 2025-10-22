@@ -1,4 +1,0 @@
-- [x] Make "About Soendev" section full screen (min-height: 100vh) and responsive
-- [x] Make "Our Services" section full screen, remove hidden-sm for mobile visibility, and ensure responsiveness
-- [x] Make "Our Clients" section full screen, fix duplicate id, and ensure responsiveness
-- [ ] Test responsiveness on mobile and laptop
