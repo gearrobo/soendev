@@ -9,6 +9,7 @@
 /vendor
 /vendor/autoload.php
 /vendor/composer
+/laravel/vendor
 
 .env
 .env.backup
