@@ -563,6 +563,19 @@ div#preloader {
   height: 100%;
 }
 
+/* Full Screen Sections */
+.full-screen-section {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.full-screen-section .container {
+  width: 100%;
+  max-width: 1200px;
+}
+
 .progress-h4 {
   color: #fff;
   font-weight: 500;

@@ -40,6 +40,28 @@
     Author: BootstrapMade.com
     License: https://bootstrapmade.com/license/
   ======================================================= -->
+
+  <style>
+    .client-wrapper {
+      width: 120px;
+      height: 100px;
+      margin: 20px auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .client-wrapper img {
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: contain;
+    }
+
+    .services-head {
+      margin-bottom: 40px;
+    }
+  </style>
+
 </head>
 
 <body data-spy="scroll" data-target="#navbar-example">

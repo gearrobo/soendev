@@ -1,6 +1,7 @@
 @extends('template.home')
 
 @section('content')
+<!-- Start Slider Area -->
 <div id="home" class="slider-area">
   <div class="bend niceties preview-2">
     <div id="ensign-nivoslider" class="slides">
@@ -17,16 +18,16 @@
             <div class="slider-content">
               <!-- layer 1 -->
               <div class="layer-1-1 hidden-xs wow slideInDown" data-wow-duration="2s" data-wow-delay=".2s">
-                <h2 class="title1">The Best Business Information </h2>
+                <h2 class="title1">Software Development</h2>
               </div>
               <!-- layer 2 -->
               <div class="layer-1-2 wow slideInUp" data-wow-duration="2s" data-wow-delay=".1s">
-                <h1 class="title2">We're In The Business Of Helping You Start Your Business</h1>
+                <h1 class="title2">Dashboard Monitoring Core System</h1>
               </div>
               <!-- layer 3 -->
               <div class="layer-1-3 hidden-xs wow slideInUp" data-wow-duration="2s" data-wow-delay=".2s">
-                <a class="ready-btn right-btn page-scroll" href="#services">See Services</a>
-                <a class="ready-btn page-scroll" href="#about">Learn More</a>
+                <a class="ready-btn right-btn page-scroll" href="#ourservices">Our Services</a>
+                <a class="ready-btn page-scroll" href="#contact">Contact US</a>
               </div>
             </div>
           </div>
@@ -42,16 +43,16 @@
             <div class="slider-content text-center">
               <!-- layer 1 -->
               <div class="layer-1-1 hidden-xs wow slideInUp" data-wow-duration="2s" data-wow-delay=".2s">
-                <h2 class="title1">The Best Business Information </h2>
+                <h2 class="title1">Internet of Things</h2>
               </div>
               <!-- layer 2 -->
               <div class="layer-1-2 wow slideInUp" data-wow-duration="2s" data-wow-delay=".1s">
-                <h1 class="title2">We're In The Business Of Get Quality Business Service</h1>
+                <h1 class="title2">Design and Development of a Remote Sensor-Based Monitoring System</h1>
               </div>
               <!-- layer 3 -->
               <div class="layer-1-3 hidden-xs wow slideInUp" data-wow-duration="2s" data-wow-delay=".2s">
-                <a class="ready-btn right-btn page-scroll" href="#services">See Services</a>
-                <a class="ready-btn page-scroll" href="#about">Learn More</a>
+                <a class="ready-btn right-btn page-scroll" href="#ourservices">Our Services</a>
+                <a class="ready-btn page-scroll" href="#contact">Contact Us</a>
               </div>
             </div>
           </div>
@@ -67,16 +68,16 @@
             <div class="slider-content">
               <!-- layer 1 -->
               <div class="layer-1-1 hidden-xs wow slideInUp" data-wow-duration="2s" data-wow-delay=".2s">
-                <h2 class="title1">The Best business Information </h2>
+                <h2 class="title1">Education Program</h2>
               </div>
               <!-- layer 2 -->
               <div class="layer-1-2 wow slideInUp" data-wow-duration="2s" data-wow-delay=".1s">
-                <h1 class="title2">Helping Business Security  & Peace of Mind for Your Family</h1>
+                <h1 class="title2">Project-Based STEM Learning through Fun Robotics Activities</h1>
               </div>
               <!-- layer 3 -->
               <div class="layer-1-3 hidden-xs wow slideInUp" data-wow-duration="2s" data-wow-delay=".2s">
-                <a class="ready-btn right-btn page-scroll" href="#services">See Services</a>
-                <a class="ready-btn page-scroll" href="#about">Learn More</a>
+                <a class="ready-btn right-btn page-scroll" href="#ourservices">Our Services</a>
+                <a class="ready-btn page-scroll" href="#contact">Contact Us</a>
               </div>
             </div>
           </div>
@@ -86,357 +87,188 @@
   </div>
 </div>
 
-  <!-- Start About area -->
-  <div id="about" class="about-area area-padding">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-12 col-sm-12 col-xs-12">
-          <div class="section-headline text-center">
-            <h2>About Sondev</h2>
-          </div>
+<!-- Start About area -->
+<div id="about" class="about-area area-padding full-screen-section">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 col-sm-12 col-xs-12">
+        <div class="section-headline text-center">
+          <h2>About Soendev</h2>
         </div>
-      </div>
-      <div class="row">
-        <!-- single-well start-->
-        <div class="col-md-6 col-sm-6 col-xs-12">
-          <div class="well-left">
-            <div class="single-well">
-              <a href="#">
-								  <img src="assets/img/about/1.jpg" alt="">
-								</a>
-            </div>
-          </div>
-        </div>
-        <!-- single-well end-->
-        <div class="col-md-6 col-sm-6 col-xs-12">
-          <div class="well-middle">
-            <div class="single-well">
-              <a href="#">
-                <h4 class="sec-head"></h4>
-              </a>
-              <p>
-              An IT Software Engineering Development company is a modern organization focused on developing innovative software solutions. With a team of professionals, a futuristic work environment, and advanced technology, the company delivers high-quality digital solutions through collaboration and creativity.
-              </p>
-              <ul>
-                <li>
-                  <i class="fa fa-check"></i> Building Management System
-                </li>
-                <li>
-                  <i class="fa fa-check"></i> Smart Home System
-                </li>
-                <li>
-                  <i class="fa fa-check"></i> Software Development Apps, Website others
-                </li>
-                <li>
-                  <i class="fa fa-check"></i> Telemetry IoT Robotic Industry Solution
-                </li>
-                <li>
-                  <i class="fa fa-check"></i> Education Program
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-        <!-- End col-->
       </div>
     </div>
-  </div>
-  <!-- End About area -->
+    <div class="row">
+      <!-- Kolom Gambar -->
+      <div class="col-md-6 col-sm-6 col-xs-12">
+        <div class="well-left">
+          <div class="single-well">
+            <img src="{{ asset('assets/img/portfolio/project1.jpeg') }}" alt="Project Soendev" class="img-responsive" style="border-radius: 10px;">
+          </div>
+        </div>
+      </div>
 
-  <!-- Start Service area -->
-  <div id="services" class="services-area area-padding">
+      <!-- Kolom Teks -->
+      <div class="col-md-6 col-sm-6 col-xs-12">
+        <div class="well-middle">
+          <div class="single-well">
+            <p style="text-align: justify;">
+              PT Software Engineering Development (Soendev) is a private company engaged in the fields of robotics and automation systems. Starting from assembling robots, Soendev now provides a wide range of integrated automation solutions.
+            </p>
+            <p style="text-align: justify;">
+              With a mission to simplify the way users monitor and control objects such as homes, buildings, and public facilities remotely via smartphones, Soendev delivers fast, efficient, and user-friendly solutions.
+            </p>
+
+            <p><strong>Vision</strong></p>
+            <p style="text-align: justify;">
+              Our vision is to implement automation systems in every building and city facility, as well as to advance robotics knowledge in both education and industry.
+            </p>
+
+            <p><strong>Mission</strong></p>
+            <p style="text-align: justify;">
+              Our mission is to develop ready-to-use and high-quality controller modules, build user-friendly and secure application systems, and provide the best experience in using automation systems optimally.
+            </p>
+          </div>
+        </div>
+      </div>
+      <!-- End col -->
+    </div>
+  </div>
+</div>
+<!-- End About area -->
+
+<!-- our-skill-area start -->
+<div class="our-skill-area fix hidden-sm full-screen-section" id="ourservices">
+  <div class="test-overly"></div>
+  <div class="skill-bg area-padding-2" style="padding-top: 20px; padding-bottom: 20px;">
     <div class="container">
       <div class="row">
-        <div class="col-md-12 col-sm-12 col-xs-12">
-          <div class="section-headline services-head text-center">
-            <h2>Our Services</h2>
-          </div>
+        <div class="col-md-12 text-center">
+          <p style="color: #5fbff7; font-weight: 600;">#Smart Solutions for a Smarter Future</p>
+          <h2 style="color: white; font-size: 42px; font-weight: bold;">Our Services</h2>
+          <p style="color: white; max-width: 900px; margin: 0 auto 40px;">
+            We have developed intelligent, technology-based solutions to address our clients’ most critical challenges. Our clients come from a wide range of organizations, including government agencies, private sector companies, banking and insurance institutions, as well as the telecommunications industry.
+          </p>
         </div>
       </div>
       <div class="row text-center">
-        <div class="services-contents">
-          <!-- Start Left services -->
-          <div class="col-md-4 col-sm-4 col-xs-12">
-            <div class="about-move">
-              <div class="services-details">
-                <div class="single-services">
-                  <a class="services-icon" href="#">
-											<i class="fa fa-code"></i>
-										</a>
-                  <h4>Mobile App Development</h4>
-                  <p>
-                  From concept to deployment, we create user-friendly mobile applications for iOS and Android platforms.
-                  </p>
-                </div>
-              </div>
-              <!-- end about-details -->
-            </div>
-          </div>
-          <div class="col-md-4 col-sm-4 col-xs-12">
-            <div class="about-move">
-              <div class="services-details">
-                <div class="single-services">
-                  <a class="services-icon" href="#">
-                    <i class="fa fa-bolt"></i>
-										</a>
-                  <h4>PLC and Electric Developer</h4>
-                  <p>
-                    will have to make sure the prototype looks finished by inserting text or photo.make sure the prototype looks finished by.
-                  </p>
-                </div>
-              </div>
-              <!-- end about-details -->
-            </div>
-          </div>
-          <div class="col-md-4 col-sm-4 col-xs-12">
-            <!-- end col-md-4 -->
-            <div class=" about-move">
-              <div class="services-details">
-                <div class="single-services">
-                  <a class="services-icon" href="#">
-											<i class="fa fa-wordpress"></i>
-										</a>
-                  <h4>Wordpress Developer</h4>
-                  <p>
-                    will have to make sure the prototype looks finished by inserting text or photo.make sure the prototype looks finished by.
-                  </p>
-                </div>
-              </div>
-              <!-- end about-details -->
-            </div>
-          </div>
-          <div class="col-md-4 col-sm-4 col-xs-12">
-            <!-- end col-md-4 -->
-            <div class=" about-move">
-              <div class="services-details">
-                <div class="single-services">
-                  <a class="services-icon" href="#">
-											<i class="fa fa-industry"></i>
-										</a>
-                  <h4>IoT Solutions Development</h4>
-                  <p>
-                  We build smart IoT systems that connect devices, sensors, and data to enable real-time monitoring, automation, and analytics.
-                  </p>
-                </div>
-              </div>
-              <!-- end about-details -->
-            </div>
-          </div>
-          <!-- End Left services -->
-          <div class="col-md-4 col-sm-4 col-xs-12">
-            <!-- end col-md-4 -->
-            <div class=" about-move">
-              <div class="services-details">
-                <div class="single-services">
-                  <a class="services-icon" href="#">
-											<i class="fa fa-bar-chart"></i>
-										</a>
-                  <h4>Web Application Development</h4>
-                  <p>
-                  We deliver responsive, secure, and high-performing web applications that support your business growth.
-                  </p>
-                </div>
-              </div>
-              <!-- end about-details -->
-            </div>
-          </div>
-          <!-- End Left services -->
-          <div class="col-md-4 col-sm-4 col-xs-12">
-            <!-- end col-md-4 -->
-            <div class=" about-move">
-              <div class="services-details">
-                <div class="single-services">
-                  <a class="services-icon" href="#">
-											<i class="fa fa-ticket"></i>
-										</a>
-                  <h4>Maintenance & Support</h4>
-                  <p>
-                  We provide continuous support and maintenance services to keep your systems running smoothly and up to date.
-                  </p>
-                </div>
-              </div>
-              <!-- end about-details -->
-            </div>
-          </div>
+        <div class="col-xs-6 col-sm-4 col-md-4">
+          <p style="color: white;"><i class="fa fa-check-circle" style="color:#00cdf7;"></i> Building Management System</p>
+        </div>
+        <div class="col-xs-6 col-sm-4 col-md-4">
+          <p style="color: white;"><i class="fa fa-check-circle" style="color:#00cdf7;"></i> Telemetry, IoT & Robotic Industry Solution</p>
+        </div>
+        <div class="col-xs-6 col-sm-4 col-md-4">
+          <p style="color: white;"><i class="fa fa-check-circle" style="color:#00cdf7;"></i> Smart Home System</p>
+        </div>
+        <div class="col-xs-6 col-sm-4 col-md-4">
+          <p style="color: white;"><i class="fa fa-check-circle" style="color:#00cdf7;"></i> Software Development (Apps, Website, and others)</p>
+        </div>
+        <div class="col-xs-6 col-sm-4 col-md-4">
+          <p style="color: white;"><i class="fa fa-check-circle" style="color:#00cdf7;"></i> Datawarehouse & Dashboard</p>
+        </div>
+        <div class="col-xs-6 col-sm-4 col-md-4">
+          <p style="color: white;"><i class="fa fa-check-circle" style="color:#00cdf7;"></i> Education Program</p>
         </div>
       </div>
     </div>
   </div>
-  <!-- End Service area -->
+</div>
+<!-- our-skill-area end -->
 
-   <!-- our-skill-area start -->
-   <div class="our-skill-area fix hidden-sm">
-    <div class="test-overly"></div>
-    <div class="skill-bg area-padding-2">
-      <div class="container">
-        <!-- section-heading end -->
-        <div class="row">
-          <div class="skill-text">
-            <!-- single-skill start -->
-            <div class="col-xs-12 col-sm-3 col-md-3 text-center">
-              <div class="single-skill">
-                <div class="progress-circular">
-                  <input type="text" class="knob" value="0" data-rel="95" data-linecap="round" data-width="175" data-bgcolor="#fff" data-fgcolor="#3EC1D5" data-thickness=".20" data-readonly="true" disabled>
-                  <h3 class="progress-h4">Web Design</h3>
-                </div>
-              </div>
-            </div>
-            <!-- single-skill end -->
-            <!-- single-skill start -->
-            <div class="col-xs-12 col-sm-3 col-md-3 text-center">
-              <div class="single-skill">
-                <div class="progress-circular">
-                  <input type="text" class="knob" value="0" data-rel="85" data-linecap="round" data-width="175" data-bgcolor="#fff" data-fgcolor="#3EC1D5" data-thickness=".20" data-readonly="true" disabled>
-                  <h3 class="progress-h4">IoT Developer</h3>
-                </div>
-              </div>
-            </div>
-            <!-- single-skill end -->
-            <!-- single-skill start -->
-            <div class="col-xs-12 col-sm-3 col-md-3 text-center">
-              <div class="single-skill">
-                <div class="progress-circular">
-                  <input type="text" class="knob" value="0" data-rel="75" data-linecap="round" data-width="175" data-bgcolor="#fff" data-fgcolor="#3EC1D5" data-thickness=".20" data-readonly="true" disabled>
-                  <h3 class="progress-h4">Php Developer</h3>
-                </div>
-              </div>
-            </div>
-            <!-- single-skill end -->
-            <!-- single-skill start -->
-            <div class="col-xs-12 col-sm-3 col-md-3 text-center">
-              <div class="single-skill">
-                <div class="progress-circular">
-                  <input type="text" class="knob" value="0" data-rel="65" data-linecap="round" data-width="175" data-bgcolor="#fff" data-fgcolor="#3EC1D5" data-thickness=".20" data-readonly="true" disabled>
-                  <h3 class="progress-h4">Java Script</h3>
-                </div>
-              </div>
-            </div>
-            <!-- single-skill end -->
-          </div>
+<!-- Start Clients Section -->
+<div id="clients" class="about-area full-screen-section" style="padding-top: 50px; padding-bottom: 40px;">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 col-sm-12 col-xs-12">
+        <div class="section-headline services-head text-center">
+          <h2>Our Clients</h2>
         </div>
       </div>
     </div>
-  </div>
-  <!-- our-skill-area end -->
 
-  <!-- Start Client area -->
-  <div id="clients" class="services-area area-padding">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-12 col-sm-12 col-xs-12">
-          <div class="section-headline services-head text-center">
-            <h2>Our Services</h2>
-          </div>
+    <div class="row text-center">
+      <div class="col-md-3 col-sm-4 col-xs-6">
+        <div class="client-wrapper">
+          <img src="{{ asset('assets/img/clients/tetamba.png') }}" alt="Tetamba Studio Kreasi">
         </div>
       </div>
-      <div class="row text-center">
-        <div class="services-contents">
-          <!-- Start Left services -->
-          <div class="col-md-4 col-sm-4 col-xs-12">
-            <div class="about-move">
-              <div class="services-details">
-                <div class="single-services">
-                  <a class="services-icon" href="#">
-											<i class="fa fa-code"></i>
-										</a>
-                  <h4>Mobile App Development</h4>
-                  <p>
-                  From concept to deployment, we create user-friendly mobile applications for iOS and Android platforms.
-                  </p>
-                </div>
-              </div>
-              <!-- end about-details -->
-            </div>
-          </div>
-          <div class="col-md-4 col-sm-4 col-xs-12">
-            <div class="about-move">
-              <div class="services-details">
-                <div class="single-services">
-                  <a class="services-icon" href="#">
-                    <i class="fa fa-bolt"></i>
-										</a>
-                  <h4>PLC and Electric Developer</h4>
-                  <p>
-                    will have to make sure the prototype looks finished by inserting text or photo.make sure the prototype looks finished by.
-                  </p>
-                </div>
-              </div>
-              <!-- end about-details -->
-            </div>
-          </div>
-          <div class="col-md-4 col-sm-4 col-xs-12">
-            <!-- end col-md-4 -->
-            <div class=" about-move">
-              <div class="services-details">
-                <div class="single-services">
-                  <a class="services-icon" href="#">
-											<i class="fa fa-wordpress"></i>
-										</a>
-                  <h4>Wordpress Developer</h4>
-                  <p>
-                    will have to make sure the prototype looks finished by inserting text or photo.make sure the prototype looks finished by.
-                  </p>
-                </div>
-              </div>
-              <!-- end about-details -->
-            </div>
-          </div>
-          <div class="col-md-4 col-sm-4 col-xs-12">
-            <!-- end col-md-4 -->
-            <div class=" about-move">
-              <div class="services-details">
-                <div class="single-services">
-                  <a class="services-icon" href="#">
-											<i class="fa fa-industry"></i>
-										</a>
-                  <h4>IoT Solutions Development</h4>
-                  <p>
-                  We build smart IoT systems that connect devices, sensors, and data to enable real-time monitoring, automation, and analytics.
-                  </p>
-                </div>
-              </div>
-              <!-- end about-details -->
-            </div>
-          </div>
-          <!-- End Left services -->
-          <div class="col-md-4 col-sm-4 col-xs-12">
-            <!-- end col-md-4 -->
-            <div class=" about-move">
-              <div class="services-details">
-                <div class="single-services">
-                  <a class="services-icon" href="#">
-											<i class="fa fa-bar-chart"></i>
-										</a>
-                  <h4>Web Application Development</h4>
-                  <p>
-                  We deliver responsive, secure, and high-performing web applications that support your business growth.
-                  </p>
-                </div>
-              </div>
-              <!-- end about-details -->
-            </div>
-          </div>
-          <!-- End Left services -->
-          <div class="col-md-4 col-sm-4 col-xs-12">
-            <!-- end col-md-4 -->
-            <div class=" about-move">
-              <div class="services-details">
-                <div class="single-services">
-                  <a class="services-icon" href="#">
-											<i class="fa fa-ticket"></i>
-										</a>
-                  <h4>Maintenance & Support</h4>
-                  <p>
-                  We provide continuous support and maintenance services to keep your systems running smoothly and up to date.
-                  </p>
-                </div>
-              </div>
-              <!-- end about-details -->
-            </div>
-          </div>
+      <div class="col-md-3 col-sm-4 col-xs-6">
+        <div class="client-wrapper">
+          <img src="{{ asset('assets/img/clients/bri.png') }}" alt="Bank BRI">
+        </div>
+      </div>
+      <div class="col-md-3 col-sm-4 col-xs-6">
+        <div class="client-wrapper">
+          <img src="{{ asset('assets/img/clients/wwf.png') }}" alt="WWF Indonesia">
+        </div>
+      </div>
+      <div class="col-md-3 col-sm-4 col-xs-6">
+        <div class="client-wrapper">
+          <img src="{{ asset('assets/img/clients/Kabupaten_Bogor.png') }}" alt="Kabupaten Bogor">
+        </div>
+      </div>
+
+      <div class="col-md-3 col-sm-4 col-xs-6">
+        <div class="client-wrapper">
+          <img src="{{ asset('assets/img/clients/dmt.png') }}" alt="DMT">
+        </div>
+      </div>
+      <div class="col-md-3 col-sm-4 col-xs-6">
+        <div class="client-wrapper">
+          <img src="{{ asset('assets/img/clients/wiennexindo.png') }}" alt="Wiennexindo Solution">
+        </div>
+      </div>
+      <div class="col-md-3 col-sm-4 col-xs-6">
+        <div class="client-wrapper">
+          <img src="{{ asset('assets/img/clients/dprd_depok.png') }}" alt="DPRD Depok">
+        </div>
+      </div>
+      <div class="col-md-3 col-sm-4 col-xs-6">
+        <div class="client-wrapper">
+          <img src="{{ asset('assets/img/clients/askrindo.png') }}" alt="Askrindo Insurance">
+        </div>
+      </div>
+      <div class="col-md-3 col-sm-4 col-xs-6">
+        <div class="client-wrapper">
+          <img src="{{ asset('assets/img/clients/satkom.png') }}" alt="Satkomindo Mediyasa">
+        </div>
+      </div>
+      <div class="col-md-3 col-sm-4 col-xs-6">
+        <div class="client-wrapper">
+          <img src="{{ asset('assets/img/clients/moratelindo.png') }}" alt="Mora Telematika Indonesia">
+        </div>
+      </div>
+
+      <div class="col-md-3 col-sm-4 col-xs-6">
+        <div class="client-wrapper">
+          <img src="{{ asset('assets/img/clients/hm.png') }}" alt="HM Media">
+        </div>
+      </div>
+
+      <div class="col-md-3 col-sm-4 col-xs-6">
+        <div class="client-wrapper">
+          <img src="{{ asset('assets/img/clients/jamsyar.png') }}" alt="Jamsyar">
+        </div>
+      </div>
+      <div class="col-md-3 col-sm-4 col-xs-6">
+        <div class="client-wrapper">
+          <img src="{{ asset('assets/img/clients/sepa.png') }}" alt="Sepa">
+        </div>
+      </div>
+      <div class="col-md-3 col-sm-4 col-xs-6">
+        <div class="client-wrapper">
+          <img src="{{ asset('assets/img/clients/amarta.png') }}" alt="Amarta">
+        </div>
+      </div>
+      <div class="col-md-3 col-sm-4 col-xs-6">
+        <div class="client-wrapper">
+          <img src="{{ asset('assets/img/clients/hikvision.png') }}" alt="Hikvision">
         </div>
       </div>
     </div>
   </div>
-  <!-- End Clinet area -->
+</div>
+<!-- End Clients Section -->
+
+
 @endsection
