@@ -7,12 +7,8 @@
 /storage/*.key
 /storage/pail
 /vendor
-vendor
-.vendor
-./vendor
 /vendor/autoload.php
 /vendor/composer
-./vendor/composer
 
 .env
 .env.backup

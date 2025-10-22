@@ -206,11 +206,11 @@ class SmtpTransport extends AbstractTransport
             $this->ping();
         }
 
-        if (!$this->started) {
-            $this->start();
-        }
-
         try {
+            if (!$this->started) {
+                $this->start();
+            }
+
             $envelope = $message->getEnvelope();
             $this->doMailFromCommand($envelope->getSender()->getEncodedAddress(), $envelope->anyAddressHasUnicodeLocalpart());
             foreach ($envelope->getRecipients() as $recipient) {
@@ -376,12 +376,12 @@ class SmtpTransport extends AbstractTransport
         $this->restartCounter = 0;
     }
 
-    public function __sleep(): array
+    public function __serialize(): array
     {
         throw new \BadMethodCallException('Cannot serialize '.__CLASS__);
     }
 
-    public function __wakeup(): void
+    public function __unserialize(array $data): void
     {
         throw new \BadMethodCallException('Cannot unserialize '.__CLASS__);
     }
