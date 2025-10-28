@@ -44,14 +44,13 @@
         <div class="col-md-4 col-sm-4 col-xs-12">
           <div class="footer-content">
             <div class="footer-head">
-              <h4>Instagram</h4>
-              <div class="flicker-img">
-                <a href="#"><img src="{{ asset('assets/img/portfolio/1.jpg') }}" alt=""></a>
-                <a href="#"><img src="{{ asset('assets/img/portfolio/2.jpg') }}" alt=""></a>
-                <a href="#"><img src="{{ asset('assets/img/portfolio/3.jpg') }}" alt=""></a>
-                <a href="#"><img src="{{ asset('assets/img/portfolio/4.jpg') }}" alt=""></a>
-                <a href="#"><img src="{{ asset('assets/img/portfolio/5.jpg') }}" alt=""></a>
-                <a href="#"><img src="{{ asset('assets/img/portfolio/6.jpg') }}" alt=""></a>
+              <h4>YOUTUBE</h4>
+              <div class="youtube-grid">
+                <div class="video-item">
+                  <a href="https://www.youtube.com/watch?v=TPW4CyVrLBY" target="_blank">
+                    <img src="https://img.youtube.com/vi/TPW4CyVrLBY/maxresdefault.jpg" alt="YouTube Video Thumbnail">
+                  </a>
+                </div>
               </div>
             </div>
           </div>
