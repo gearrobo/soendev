@@ -47,9 +47,14 @@
               <h4>YOUTUBE</h4>
               <div class="youtube-grid">
                 <div class="video-item">
-                  <a href="https://www.youtube.com/watch?v=TPW4CyVrLBY" target="_blank">
-                    <img src="https://img.youtube.com/vi/TPW4CyVrLBY/maxresdefault.jpg" alt="YouTube Video Thumbnail">
-                  </a>
+                    <iframe 
+                      class="w-full h-full rounded-xl shadow-lg"
+                      src="https://www.youtube.com/embed/TPW4CyVrLBY" 
+                      title="YouTube video player"
+                      frameborder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowfullscreen>
+                  </iframe>
                 </div>
               </div>
             </div>
