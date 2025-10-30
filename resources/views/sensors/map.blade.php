@@ -11,7 +11,7 @@
     <div class="row g-3">
         <div class="col-lg-6">
             <div class="card shadow-sm">
-                <div class="card-header bg-primary text-white">
+                <div class="card-header bg-info" style="color: white !important;">
                     <h5 class="card-title mb-0">Active Sensors</h5>
                 </div>
                 <div class="card-body p-0">
@@ -38,7 +38,7 @@
         </div>
         <div class="col-lg-6">
             <div class="card shadow-sm">
-                <div class="card-header bg-info text-white">
+                <div class="card-header bg-info" style="color: white !important;">
                     <h5 class="card-title mb-0">Sensor Map</h5>
                 </div>
                 <div class="card-body p-0">
