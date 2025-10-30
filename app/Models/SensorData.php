@@ -8,5 +8,5 @@ class SensorData extends Model
 {
     protected $table = 'sensor_data';
 
-    protected $fillable = ['api_key', 'status', 'temperature', 'humidity'];
+    protected $fillable = ['name', 'status', 'temperature', 'humidity', 'latitude', 'longitude'];
 }

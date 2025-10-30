@@ -10,10 +10,12 @@ class SensorDataController extends Controller
     public function store(Request $request)
     {
         $data = new SensorData();
-        $data->api_key = $request->api_key;
+        $data->name = $request->name;
         $data->status = $request->status;
         $data->temperature = $request->temperature;
         $data->humidity = $request->humidity;
+        $data->latitude = $request->latitude;
+        $data->longitude = $request->longitude;
         $data->save();
 
         return response()->json(['message' => 'Data saved successfully'], 201);

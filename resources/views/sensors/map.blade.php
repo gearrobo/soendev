@@ -22,20 +22,24 @@
                             <table class="table table-striped table-hover mb-0">
                                 <thead class="table-dark sticky-top">
                                     <tr>
-                                        <th>API Key</th>
+                                        <th>Name</th>
                                         <th>Status</th>
                                         <th>Temp (°C)</th>
                                         <th>Humidity (%)</th>
+                                        <th>Lat</th>
+                                        <th>Lng</th>
                                         <th>Created</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     @foreach($sensorData as $sensor)
                                     <tr>
-                                        <td>{{ $sensor->api_key }}</td>
+                                        <td>{{ $sensor->name }}</td>
                                         <td><span class="badge bg-success">{{ $sensor->status }}</span></td>
                                         <td>{{ $sensor->temperature }}</td>
                                         <td>{{ $sensor->humidity }}</td>
+                                        <td>{{ number_format($sensor->latitude, 6) }}</td>
+                                        <td>{{ number_format($sensor->longitude, 6) }}</td>
                                         <td>{{ $sensor->created_at->format('d/m/Y H:i') }}</td>
                                     </tr>
                                     @endforeach

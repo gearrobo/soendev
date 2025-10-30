@@ -13,10 +13,12 @@ return new class extends Migration
     {
         Schema::create('sensor_data', function (Blueprint $table) {
             $table->id();
-            $table->string('api_key', 20);
+            $table->string('name', 20);
             $table->string('status', 20);
             $table->float('temperature');
             $table->float('humidity');
+            $table->double('latitude', 15, 12);
+            $table->double('longitude', 15, 12);
             $table->timestamps();
         });
     }
