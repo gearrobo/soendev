@@ -22,7 +22,7 @@
                                     <th>Name</th>
                                     <th>Status</th>
                                     <th>Temp (°C)</th>
-                                    <th>Humidity (%)</th>
+                                    <th>Humi (%)</th>
                                     <th>Lat</th>
                                     <th>Lng</th>
                                     <th>Created</th>
