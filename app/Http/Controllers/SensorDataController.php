@@ -28,8 +28,8 @@ class SensorDataController extends Controller
     }
     public function showMap()
     {
-        $sensorData = SensorData::all();
-        return view('sensors.map', compact('sensorData'));      
+        $sensorData = SensorData::where('status', 'active')->orderBy('created_at', 'desc')->get();
+        return view('sensors.map', compact('sensorData'));
     }
     public function destroy($id)
     {
