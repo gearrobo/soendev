@@ -16,9 +16,6 @@
                 </div>
                 <div class="card-body p-0">
                     <div class="table-responsive" style="max-height: 75vh; overflow-y: auto;">
-                        @if($sensorData->isEmpty())
-                            <p class="text-center text-muted py-4">No active sensors found.</p>
-                        @else
                             <table class="table table-striped table-hover mb-0">
                                 <thead class="table-dark sticky-top">
                                     <tr>
@@ -45,7 +42,6 @@
                                     @endforeach
                                 </tbody>
                             </table>
-                        @endif
                     </div>
                 </div>
             </div>

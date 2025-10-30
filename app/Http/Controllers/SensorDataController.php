@@ -28,7 +28,7 @@ class SensorDataController extends Controller
     }
     public function showMap()
     {
-        $sensorData = SensorData::where('status', 'active')->orderBy('created_at', 'desc')->get();
+        $sensorData = SensorData::where('status','Online')->orderBy('created_at', 'desc')->get();
         return view('sensors.map', compact('sensorData'));
     }
     public function destroy($id)
