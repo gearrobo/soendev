@@ -11,6 +11,9 @@
 /vendor/composer
 /laravel/vendor
 
+/public/assets
+
+
 .env
 .env.backup
 .env.production
