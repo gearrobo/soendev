@@ -17,6 +17,7 @@
                   <li><a href="https://www.instagram.com/soendev.id" target="_blank"><i class="fa fa-instagram"></i></a></li>
                   <li><a href="https://wa.me/6289616924259" target="_blank"><i class="fa fa-whatsapp"></i></a></li>
                   <li><a href="https://mailto:soendev.adm@gmail.com"><i class="fa fa-envelope"></i></a></li>
+                  <li><a href="https://www.youtube.com/@SCreativeTech" target="_blank"><i class="fa fa-youtube"></i></a></li>
                 </ul>
               </div>
             </div>
