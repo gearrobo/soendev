@@ -1801,6 +1801,9 @@ div#preloader {
   text-align: center;
   width: 40px;
   border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .flicker-img>a {

@@ -124,4 +124,6 @@
     // Auto refresh setiap 10 detik
     setInterval(updateSensorData, 10000);
 </script>
+
+@section('scripts')
 @endsection
