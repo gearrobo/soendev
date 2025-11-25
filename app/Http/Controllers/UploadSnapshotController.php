@@ -7,6 +7,28 @@ use Illuminate\Support\Facades\Storage;
 
 class UploadSnapshotController extends Controller
 {
+    /**
+     * Handle incoming snapshot upload request.
+     *
+     * Expected JSON body:
+     * {
+     *   "fileName": "example.png",
+     *   "eventType": "SomeEvent", // optional, defaults to 'Unknown'
+     *   "data": "base64-encoded-string"
+     * }
+     *
+     * Saves the decoded snapshot file to:
+     * storage/app/public/uploads/snapshot/{eventType}/
+     *
+     * Returns JSON response with success status and public URL:
+     * {
+     *    "success": true,
+     *    "url": "http://yourapp/storage/uploads/snapshot/{eventType}/fileName"
+     * }
+     *
+     * @param Request $request
+     * @return \Illuminate\Http\JsonResponse
+     */
     public function uploadSnapshot(Request $request)
     {
         $request->validate([
@@ -54,7 +76,18 @@ class UploadSnapshotController extends Controller
         ]);
     }
 
-    // New method to list snapshots grouped by eventType
+    /**
+     * List uploaded snapshots grouped by eventType.
+     *
+     * Returns a Blade view 'snapshots.index' with:
+     * [
+     *   'eventType1' => [url1, url2, ...],
+     *   'eventType2' => [url3, url4, ...],
+     *   ...
+     * ]
+     *
+     * @return \Illuminate\View\View
+     */
     public function listSnapshots()
     {
         $disk = Storage::disk('public');
