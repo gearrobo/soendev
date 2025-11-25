@@ -32,7 +32,7 @@
               <h4>Information</h4>
               <p>Contact us for information and collaboration opportunities.</p>
               <div class="footer-contacts">
-                <p><i class="fa fa-phone"></i> +62 896 1692 4259</p>
+                <p><i class="fa fa-phone"></i> (+62) 896 1692 4259</p>
                 <p><i class="fa fa-envelope"></i> soendev.adm@gmail.com</p>
                 <p><i class="fa fa-clock-o"></i> 10am–4pm</p>
               </div>
