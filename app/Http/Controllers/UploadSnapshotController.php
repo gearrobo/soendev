@@ -46,4 +46,28 @@ class UploadSnapshotController extends Controller
             'url' => $publicUrl,
         ]);
     }
+
+    // New method to list snapshots grouped by eventType
+    public function listSnapshots()
+    {
+        $disk = Storage::disk('public');
+        $basePath = 'uploads/snapshot';
+
+        // Get subdirectories (event types)
+        $directories = $disk->directories($basePath);
+
+        $snapshots = [];
+
+        foreach ($directories as $dir) {
+            $files = $disk->files($dir);
+            // Map files to URLs
+            $filesUrls = array_map(function ($filePath) {
+                return asset('storage/' . str_replace('\\', '/', $filePath));
+            }, $files);
+
+            $snapshots[basename($dir)] = $filesUrls;
+        }
+
+        return view('snapshots.index', ['snapshots' => $snapshots]);
+    }
 }
