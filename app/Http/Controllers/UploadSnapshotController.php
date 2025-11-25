@@ -29,17 +29,24 @@ class UploadSnapshotController extends Controller
             return response()->json(['success' => false, 'msg' => 'Error decoding data: ' . $e->getMessage()], 400);
         }
 
-        // Define storage path
-        $folderPath = "public/uploads/snapshot/" . $eventType;
+        // Use Laravel Storage facade with public disk
+        $disk = Storage::disk('public');
+        $folderPath = "uploads/snapshot/" . $eventType;
 
-        // Ensure folder exists (Laravel's Storage will handle directory creation)
+        // Ensure directory exists
+        if (!$disk->exists($folderPath)) {
+            $disk->makeDirectory($folderPath);
+        }
+
+        // Prepare file path
         $filePath = $folderPath . '/' . $fileName;
 
-        // Store the file
-        Storage::put($filePath, $decodedData);
+        // Store the file using put
+        // Since putFileAs expects an UploadedFile instance, we'll use put with path and binary
+        $disk->put($filePath, $decodedData);
 
-        // Generate public URL - assumes storage link is present
-        $publicUrl = asset('storage/uploads/snapshot/' . urlencode($eventType) . '/' . urlencode($fileName));
+        // Generate public URL - storage link assumed
+        $publicUrl = asset('storage/' . $filePath);
 
         return response()->json([
             'success' => true,
