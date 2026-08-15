@@ -1,0 +1,82 @@
+services:
+
+  app:
+    image: soendev-app:prod
+    container_name: soendev-app
+    restart: unless-stopped
+    working_dir: /var/www/html
+
+    env_file:
+      - .env.prod
+
+    volumes:
+      - app_code:/var/www/html
+      - storage:/var/www/html/storage
+
+    depends_on:
+      db:
+        condition: service_healthy
+
+    networks:
+      - soendev
+
+
+  nginx:
+    image: nginx:alpine
+    container_name: soendev-nginx
+    restart: unless-stopped
+
+    ports:
+      - "8080:80"
+
+    volumes:
+      - app_code:/var/www/html:ro
+      - storage:/var/www/html/storage:ro
+      - ./docker/nginx/default.conf:/etc/nginx/conf.d/default.conf:ro
+
+    depends_on:
+      - app
+
+    networks:
+      - soendev
+
+
+  db:
+    image: mariadb:10.6
+    container_name: soendev-db
+    restart: unless-stopped
+
+    environment:
+      MYSQL_DATABASE: dcim
+      MYSQL_USER: soendev
+      MYSQL_PASSWORD: soendev_dev_password
+      MYSQL_ROOT_PASSWORD: root_dev_password
+
+    volumes:
+      - dbdata:/var/lib/mysql
+
+    healthcheck:
+      test:
+        [
+          "CMD",
+          "healthcheck.sh",
+          "--connect",
+          "--innodb_initialized"
+        ]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+
+    networks:
+      - soendev
+
+
+volumes:
+  app_code:
+  storage:
+  dbdata:
+
+
+networks:
+  soendev:
+    driver: bridge
