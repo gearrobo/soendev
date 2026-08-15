@@ -35,3 +35,7 @@ composer.lock
 .DS_Store
 .AppleDouble
 .LSOverride
+
+/vendor
+.env
+.DS_Store
