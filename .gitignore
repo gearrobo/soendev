@@ -39,3 +39,4 @@ composer.lock
 /vendor
 .env
 .DS_Store
+soendev-app-prod.tar.gz
