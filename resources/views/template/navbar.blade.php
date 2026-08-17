@@ -26,6 +26,9 @@
                 <li class="{{ request()->is('/') ? 'active' : '' }}">
                   <a class="page-scroll" href="/">Home</a>
                 </li>
+                <li class="{{ request()->is('blog*') ? 'active' : '' }}">
+                    <a href="{{ route('blog.index') }}">Blog</a>
+                </li>
                 <!-- <li>
                   <a class="page-scroll" href="#about">About</a>
                 </li>
