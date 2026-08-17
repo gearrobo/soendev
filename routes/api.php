@@ -5,6 +5,9 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\SensorDataController;
 use App\Http\Controllers\UploadSnapshotController;
 use App\Http\Controllers\VideoController;
+use App\Http\Controllers\Api\Esp32FirmwareController;
+
+
 
 Route::get('/user', function (Request $request) {
     return $request->user();
@@ -23,3 +26,7 @@ Route::get('/videos/{filename}', [VideoController::class, 'getVideo']);
 Route::delete('/videos/{filename}', [VideoController::class, 'deleteVideo']);
 Route::get('/stream/video/{filename}', [VideoController::class, 'streamVideo']);
 
+Route::get(
+    '/esp32/firmware/latest',
+    [Esp32FirmwareController::class, 'latest']
+);
