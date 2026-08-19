@@ -41,12 +41,16 @@
 
         /* NAVBAR */
 
+        /* =========================
+        NAVBAR
+        ========================= */
+
         .navbar {
             position: sticky;
             top: 0;
             z-index: 1000;
-            background: rgba(255,255,255,.96);
-            border-bottom: 1px solid #e5e7eb;
+            background: #020b18;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
             backdrop-filter: blur(10px);
         }
 
@@ -58,10 +62,21 @@
         }
 
         .logo {
-            font-size: 25px;
-            font-weight: 800;
-            letter-spacing: -1px;
+            display: flex;
+            align-items: center;
         }
+
+        .logo img {
+            display: block;
+            width: 190px;
+            height: auto;
+            max-height: 58px;
+            object-fit: contain;
+        }
+
+        /* =========================
+        NAV MENU
+        ========================= */
 
         .nav-menu {
             display: flex;
@@ -79,27 +94,45 @@
             padding: 27px 15px;
             font-size: 14px;
             font-weight: 600;
-            color: #374151;
+            color: #ffffff !important;
+            transition: color .2s ease;
         }
 
-        .nav-link:hover {
-            color: #000000;
+        .nav-link:hover,
+        .nav-item:hover > .nav-link {
+            color: #087cff !important;
         }
+
+        /* =========================
+        DROPDOWN
+        ========================= */
 
         .dropdown {
             position: absolute;
-            top: 100%;
+            top: calc(100% - 1px);
             left: 0;
+
             min-width: 240px;
-            background: white;
-            border: 1px solid #e5e7eb;
+
+            background: #071426;
+
+            border: 1px solid rgba(8, 124, 255, 0.35);
             border-radius: 10px;
-            box-shadow: 0 15px 40px rgba(0,0,0,.08);
+
+            box-shadow:
+                0 15px 40px rgba(0, 0, 0, .35),
+                0 0 20px rgba(8, 124, 255, .08);
+
             padding: 8px;
+
             opacity: 0;
             visibility: hidden;
             transform: translateY(8px);
-            transition: .2s ease;
+
+            transition:
+                opacity .2s ease,
+                visibility .2s ease,
+                transform .2s ease;
         }
 
         .nav-item:hover .dropdown {
@@ -108,17 +141,29 @@
             transform: translateY(0);
         }
 
+
+        /* dropdown links */
+
         .dropdown a {
             display: block;
-            padding: 11px 14px;
+
+            padding: 12px 14px;
+
             border-radius: 7px;
+
             font-size: 14px;
-            color: #374151;
+            font-weight: 500;
+
+            color: #ffffff !important;
+
+            transition:
+                background .2s ease,
+                color .2s ease;
         }
 
         .dropdown a:hover {
-            background: #f3f4f6;
-            color: #111827;
+            background: rgba(8, 124, 255, 0.15);
+            color: #087cff !important;
         }
 
         /* HERO */
@@ -676,7 +721,10 @@
     <div class="container navbar-inner">
 
         <a href="{{ route('home') }}" class="logo">
-            SOENDEV
+            <img
+                src="{{ asset('assets/img/soendev.png') }}"
+                alt="SOENDEV"
+            >
         </a>
 
         <ul class="nav-menu">
@@ -773,7 +821,13 @@
 
         <div>
             <div class="footer-logo">
-                SOENDEV
+                {{-- LOGO --}}
+                <a href="{{ route('home') }}" class="logo">
+                    <img
+                        src="{{ asset('assets/img/soendev.png') }}"
+                        alt="SOENDEV"
+                    >
+                </a>
             </div>
 
             <div class="footer-text">
