@@ -722,7 +722,7 @@
 
         <a href="{{ route('home') }}" class="logo">
             <img
-                src="{{ asset('assets/img/soendev.png') }}"
+                src="{{ asset('assets/img/nav/soendev.png') }}"
                 alt="SOENDEV"
             >
         </a>
@@ -824,7 +824,7 @@
                 {{-- LOGO --}}
                 <a href="{{ route('home') }}" class="logo">
                     <img
-                        src="{{ asset('assets/img/soendev.png') }}"
+                        src="{{ asset('assets/img/nav/soendev.png') }}"
                         alt="SOENDEV"
                     >
                 </a>
