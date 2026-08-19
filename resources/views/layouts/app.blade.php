@@ -11,6 +11,12 @@
     <meta name="description"
           content="@yield('description', 'SOENDEV - Software, Hardware, IoT and AI Development')">
 
+    <link rel="icon" type="image/png"
+        href="{{ asset('assets/img/soendev-favicon.png') }}">
+
+    <link rel="apple-touch-icon"
+        href="{{ asset('assets/img/soendev-favicon.png') }}">
+
     <style>
         * {
             margin: 0;
