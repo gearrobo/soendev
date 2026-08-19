@@ -1,78 +1,126 @@
-@extends('template.home')
+@extends('layouts.app')
+
+@section('title', $category->name . ' | SOENDEV')
 
 @section('content')
 
-<section class="page-section" style="padding-top: 140px;">
+<section class="blog-hero">
     <div class="container">
 
-        <div class="mb-5">
-            <h1>{{ $category->name }}</h1>
+        <span class="eyebrow">
+            SOENDEV INSIGHT
+        </span>
 
-            @if($category->description)
-                <p class="text-muted">
-                    {{ $category->description }}
-                </p>
-            @endif
+        <h1>
+            {{ $category->name }}
+        </h1>
 
-            <a href="{{ route('blog.index') }}">
-                ← Semua artikel
-            </a>
-        </div>
+        @if($category->description)
+            <p>
+                {{ $category->description }}
+            </p>
+        @else
+            <p>
+                Technology insights and articles from SOENDEV.
+            </p>
+        @endif
 
-        <div class="row">
+    </div>
+</section>
+
+
+<section class="blog-content">
+
+    <div class="container">
+
+        <div class="blog-grid">
 
             @forelse($posts as $post)
 
-                <div class="col-md-4 mb-4">
+                <article class="blog-card">
 
-                    <article class="card h-100">
+                    <a
+                        href="{{ route(
+                            'blog.show',
+                            [
+                                'category' => $category->slug,
+                                'slug' => $post->slug
+                            ]
+                        ) }}"
+                        class="blog-card-image"
+                    >
 
                         @if($post->featured_image)
+
                             <img
-                                src="{{ Storage::disk('public')->url($post->featured_image) }}"
-                                class="card-img-top"
+                                src="{{ asset('storage/' . $post->featured_image) }}"
                                 alt="{{ $post->title }}"
+                                loading="lazy"
                             >
+
+                        @else
+
+                            <div class="blog-card-placeholder">
+                                SOENDEV INSIGHT
+                            </div>
+
                         @endif
 
-                        <div class="card-body">
+                    </a>
 
-                            <h3>
-                                {{ $post->title }}
-                            </h3>
+                    <div class="blog-card-body">
 
-                            @if($post->excerpt)
-                                <p>
-                                    {{ $post->excerpt }}
-                                </p>
-                            @endif
-
-                            <a href="{{ route('blog.show', [
-                                'category' => $category->slug,
-                                'slug' => $post->slug,
-                            ]) }}">
-                                Baca selengkapnya →
-                            </a>
-
+                        <div class="blog-card-category">
+                            {{ $category->name }}
                         </div>
 
-                    </article>
+                        <h2>
+                            {{ $post->title }}
+                        </h2>
 
-                </div>
+                        @if($post->excerpt)
+                            <p class="blog-card-excerpt">
+                                {{ $post->excerpt }}
+                            </p>
+                        @endif
+
+                        <div class="blog-card-meta">
+                            {{ optional($post->published_at)->format('d M Y') }}
+                        </div>
+
+                        <a
+                            href="{{ route(
+                                'blog.show',
+                                [
+                                    'category' => $category->slug,
+                                    'slug' => $post->slug
+                                ]
+                            ) }}"
+                            class="blog-read"
+                        >
+                            Read Article →
+                        </a>
+
+                    </div>
+
+                </article>
 
             @empty
 
-                <div class="col-md-12">
-                    <p>Belum ada artikel dalam kategori ini.</p>
+                <div class="blog-empty">
+                    Belum ada artikel dalam kategori ini.
                 </div>
 
             @endforelse
 
         </div>
 
-        {{ $posts->links() }}
+        <div class="blog-pagination">
+            {{ $posts->links() }}
+        </div>
 
     </div>
+
 </section>
 
 @endsection
