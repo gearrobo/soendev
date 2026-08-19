@@ -1,74 +1,60 @@
 <?php
 
-namespace App\Filament\Resources\HomepageSections\Schemas;
+namespace App\Filament\Resources\HomepageSections;
 
-use Filament\Forms\Components\FileUpload;
-use Filament\Forms\Components\Select;
-use Filament\Forms\Components\Textarea;
-use Filament\Forms\Components\TextInput;
-use Filament\Forms\Components\Toggle;
+use App\Filament\Resources\HomepageSections\Pages\CreateHomepageSection;
+use App\Filament\Resources\HomepageSections\Pages\EditHomepageSection;
+use App\Filament\Resources\HomepageSections\Pages\ListHomepageSections;
+use App\Filament\Resources\HomepageSections\Pages\ViewHomepageSection;
+use App\Filament\Resources\HomepageSections\Schemas\HomepageSectionForm;
+use App\Filament\Resources\HomepageSections\Schemas\HomepageSectionInfolist;
+use App\Filament\Resources\HomepageSections\Tables\HomepageSectionsTable;
+use App\Models\HomepageSection;
+use Filament\Resources\Resource;
 use Filament\Schemas\Schema;
+use Filament\Tables\Table;
 
-class HomepageSectionForm
+class HomepageSectionResource extends Resource
 {
-    public static function configure(Schema $schema): Schema
+    protected static ?string $model = HomepageSection::class;
+
+    protected static ?string $recordTitleAttribute = 'title';
+
+    protected static ?string $navigationLabel = 'Homepage Sections';
+
+    protected static ?string $modelLabel = 'Homepage Section';
+
+    protected static ?string $pluralModelLabel = 'Homepage Sections';
+
+    public static function form(Schema $schema): Schema
     {
-        return $schema
-            ->components([
+        return HomepageSectionForm::configure($schema);
+    }
 
-                Select::make('section_key')
-                    ->label('Section')
-                    ->options([
-                        'hero'      => 'Hero',
-                        'about'     => 'About / Profile',
-                        'services'  => 'Services',
-                        'products'  => 'Our Products',
-                        'portfolio' => 'Portfolio',
-                        'clients'   => 'Our Clients',
-                        'contact'   => 'Contact',
-                    ])
-                    ->required()
-                    ->native(false),
+    public static function infolist(Schema $schema): Schema
+    {
+        return HomepageSectionInfolist::configure($schema);
+    }
 
-                TextInput::make('title')
-                    ->label('Title')
-                    ->maxLength(255),
+    public static function table(Table $table): Table
+    {
+        return HomepageSectionsTable::configure($table);
+    }
 
-                TextInput::make('subtitle')
-                    ->label('Subtitle')
-                    ->maxLength(255),
+    public static function getRelations(): array
+    {
+        return [
+            //
+        ];
+    }
 
-                Textarea::make('content')
-                    ->label('Content')
-                    ->rows(8)
-                    ->columnSpanFull(),
-
-                FileUpload::make('image')
-                    ->label('Image')
-                    ->image()
-                    ->disk('public')
-                    ->directory('homepage')
-                    ->imageEditor(),
-
-                TextInput::make('button_text')
-                    ->label('Button Text')
-                    ->maxLength(255),
-
-                TextInput::make('button_url')
-                    ->label('Button URL')
-                    ->maxLength(255),
-
-                Toggle::make('is_active')
-                    ->label('Active')
-                    ->default(true)
-                    ->required(),
-
-                TextInput::make('sort_order')
-                    ->label('Order')
-                    ->numeric()
-                    ->default(0)
-                    ->required(),
-
-            ]);
+    public static function getPages(): array
+    {
+        return [
+            'index' => ListHomepageSections::route('/'),
+            'create' => CreateHomepageSection::route('/create'),
+            'view' => ViewHomepageSection::route('/{record}'),
+            'edit' => EditHomepageSection::route('/{record}/edit'),
+        ];
     }
 }
