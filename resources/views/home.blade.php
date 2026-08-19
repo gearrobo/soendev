@@ -297,53 +297,6 @@
 </section>
 
 
-{{-- CLIENTS --}}
-
-<section id="clients" class="landing-section light">
-
-    <div class="container">
-
-        <div class="section-heading">
-
-            <span>OUR CLIENT</span>
-
-            <h2>
-                Trusted by organizations and businesses.
-            </h2>
-
-        </div>
-
-        <div class="client-grid">
-
-            @foreach([
-                'amarta.png',
-                'askrindo.png',
-                'bri.png',
-                'dmt.png',
-                'hikvision.png',
-                'jamsyar.png',
-                'moratelindo.png',
-                'satkom.png',
-                'soendev.png',
-                'wwf.png'
-            ] as $client)
-
-                <div class="client-logo">
-
-                    <img
-                        src="{{ asset('assets/img/clients/' . $client) }}"
-                        alt="Client">
-
-                </div>
-
-            @endforeach
-
-        </div>
-
-    </div>
-
-</section>
-
 
 {{-- PRODUCT --}}
 
