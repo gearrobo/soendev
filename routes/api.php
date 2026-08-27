@@ -7,8 +7,11 @@ use App\Http\Controllers\SensorDataController;
 use App\Http\Controllers\UploadSnapshotController;
 use App\Http\Controllers\VideoController;
 use App\Http\Controllers\Api\Esp32FirmwareController;
+use App\Http\Controllers\Sim800Controller;
 
 
+
+Route::get('/sim800/send', [Sim800Controller::class, 'send']);
 
 Route::get('/user', function (Request $request) {
     return $request->user();
