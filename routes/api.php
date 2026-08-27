@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\SensorDataController;
 use App\Http\Controllers\UploadSnapshotController;
@@ -30,3 +31,33 @@ Route::get(
     '/esp32/firmware/latest',
     [Esp32FirmwareController::class, 'latest']
 );
+
+Route::get('/telegram/send', function (Request $request) {
+
+    $message = $request->input('message', 'berhasil');
+
+    $token = env('TELEGRAM_TOKEN');
+    $chatIds = explode(',', env('TELEGRAM_CHAT_IDS'));
+
+    $results = [];
+
+    foreach ($chatIds as $chatId) {
+        $response = Http::post(
+            "https://api.telegram.org/bot{$token}/sendMessage",
+            [
+                'chat_id' => trim($chatId),
+                'text'    => $message,
+            ]
+        );
+
+        $results[] = [
+            'chat_id' => trim($chatId),
+            'success' => $response->successful(),
+        ];
+    }
+
+    return response()->json([
+        'success' => true,
+        'results' => $results,
+    ]);
+});
