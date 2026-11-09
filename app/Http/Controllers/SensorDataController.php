@@ -40,4 +40,26 @@ class SensorDataController extends Controller
         $sensorData = SensorData::findOrFail($id);
         $sensorData->update($request->all());
     }
+    public function history(Request $request)
+    {
+    $request->validate([
+        'name' => 'required|string|max:100',
+        'hours' => 'nullable|integer|min:1|max:168',
+    ]);
+
+    $name = $request->input('name');
+    $hours = (int) $request->input('hours', 24);
+
+    $data = SensorData::where('name', $name)
+        ->where('created_at', '>=', now()->subHours($hours))
+        ->orderBy('created_at', 'asc')
+        ->get([
+            'name',
+            'temperature',
+            'humidity',
+            'created_at',
+        ]);
+
+    return response()->json($data);
+    }
 }
