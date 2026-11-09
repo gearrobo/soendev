@@ -462,6 +462,74 @@
 
         </div>
 
+                {{-- SENSOR CHARTS --}}
+
+        <div class="demo-map-card">
+
+            <div class="demo-map-header">
+
+                <h2>
+                    Real-Time Temperature & Humidity
+                </h2>
+
+                <p>
+                    Monitoring suhu dan kelembapan sensor
+                </p>
+
+                <div style="display:flex; gap:12px; flex-wrap:wrap; margin-top:20px;">
+
+                    <select id="chart-device"
+                        style="padding:10px; border:1px solid #ddd; border-radius:8px;">
+
+                        <option value="SOEDIUM_BULK_01_M1">Sensor M1</option>
+                        <option value="SOEDIUM_BULK_01_M2">Sensor M2</option>
+                        <option value="SOEDIUM_BULK_01_M3">Sensor M3</option>
+                        <option value="SOEDIUM_BULK_01_M4">Sensor M4</option>
+                        <option value="SOEDIUM_BULK_01_M5">Sensor M5</option>
+
+                    </select>
+
+                    <select id="chart-period"
+                        style="padding:10px; border:1px solid #ddd; border-radius:8px;">
+
+                        <option value="1">Last 1 Hour</option>
+                        <option value="6">Last 6 Hours</option>
+                        <option value="24" selected>Last 24 Hours</option>
+                        <option value="168">Last 7 Days</option>
+
+                    </select>
+
+                    <button id="chart-refresh"
+                        type="button"
+                        style="padding:10px 18px; border:0; border-radius:8px; background:#0b1322; color:white;">
+
+                        Refresh
+
+                    </button>
+
+                </div>
+
+                <div id="chart-message"
+                    style="font-size:13px; color:#64748b; margin-top:12px;">
+
+                    Loading sensor data...
+
+                </div>
+
+            </div>
+
+            <div style="padding:24px;">
+
+                <div style="height:380px;">
+
+                    <canvas id="sensor-chart"></canvas>
+
+                </div>
+
+            </div>
+
+        </div>
+
 
     </div>
 
@@ -475,6 +543,175 @@
 
 <script
     src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js">
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+
+    const deviceSelect = document.getElementById('chart-device');
+    const periodSelect = document.getElementById('chart-period');
+    const refreshButton = document.getElementById('chart-refresh');
+    const message = document.getElementById('chart-message');
+    const canvas = document.getElementById('sensor-chart');
+
+    if (!canvas) {
+        return;
+    }
+
+    const sensorChart = new Chart(canvas, {
+        type: 'line',
+
+        data: {
+            labels: [],
+
+            datasets: [
+                {
+                    label: 'Temperature (°C)',
+                    data: [],
+                    borderColor: '#ef4444',
+                    backgroundColor: 'rgba(239,68,68,0.1)',
+                    borderWidth: 2,
+                    pointRadius: 2,
+                    tension: 0.3,
+                    yAxisID: 'yTemperature'
+                },
+                {
+                    label: 'Humidity (%)',
+                    data: [],
+                    borderColor: '#0ea5e9',
+                    backgroundColor: 'rgba(14,165,233,0.1)',
+                    borderWidth: 2,
+                    pointRadius: 2,
+                    tension: 0.3,
+                    yAxisID: 'yHumidity'
+                }
+            ]
+        },
+
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+
+            interaction: {
+                mode: 'index',
+                intersect: false
+            },
+
+            plugins: {
+                legend: {
+                    position: 'top'
+                }
+            },
+
+            scales: {
+                x: {
+                    title: {
+                        display: true,
+                        text: 'Waktu'
+                    }
+                },
+
+                yTemperature: {
+                    type: 'linear',
+                    position: 'left',
+
+                    title: {
+                        display: true,
+                        text: 'Temperature (°C)',
+                        color: '#ef4444'
+                    },
+
+                    ticks: {
+                        color: '#ef4444'
+                    }
+                },
+
+                yHumidity: {
+                    type: 'linear',
+                    position: 'right',
+                    min: 0,
+                    max: 100,
+
+                    title: {
+                        display: true,
+                        text: 'Humidity (%)',
+                        color: '#0ea5e9'
+                    },
+
+                    ticks: {
+                        color: '#0ea5e9'
+                    },
+
+                    grid: {
+                        drawOnChartArea: false
+                    }
+                }
+            }
+        }
+    });
+
+    async function loadChartData() {
+
+        const device = deviceSelect.value;
+        const hours = periodSelect.value;
+
+        message.textContent = 'Loading sensor data...';
+
+        try {
+
+            const url =
+                `/api/sensor-data/history?name=${encodeURIComponent(device)}&hours=${hours}`;
+
+            const response = await fetch(url, {
+                cache: 'no-store',
+                headers: {
+                    'Accept': 'application/json'
+                }
+            });
+
+            if (!response.ok) {
+                throw new Error(`HTTP ${response.status}`);
+            }
+
+            const data = await response.json();
+
+            sensorChart.data.labels = data.map(item =>
+                new Date(item.created_at).toLocaleString('id-ID')
+            );
+
+            sensorChart.data.datasets[0].data = data.map(item =>
+                item.temperature === null ? null : Number(item.temperature)
+            );
+
+            sensorChart.data.datasets[1].data = data.map(item =>
+                item.humidity === null ? null : Number(item.humidity)
+            );
+
+            sensorChart.update();
+
+            message.textContent =
+                `${device} | ${data.length} data points | Update: ${new Date().toLocaleTimeString('id-ID')}`;
+
+        } catch (error) {
+
+            console.error('Chart error:', error);
+
+            message.textContent =
+                'Gagal mengambil data grafik. Periksa endpoint API history.';
+        }
+    }
+
+    deviceSelect.addEventListener('change', loadChartData);
+    periodSelect.addEventListener('change', loadChartData);
+    refreshButton.addEventListener('click', loadChartData);
+
+    loadChartData();
+
+    setInterval(loadChartData, 60000);
+
+});
 </script>
 
 
@@ -514,6 +751,8 @@ document.addEventListener('DOMContentLoaded', function () {
         return;
 
     }
+
+    
 
 
     const bounds = [];
