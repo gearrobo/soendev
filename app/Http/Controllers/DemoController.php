@@ -2,59 +2,50 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\DeviceSensor;
+use App\Models\SensorData;
 
 class DemoController extends Controller
 {
     public function index()
     {
-        $devices = DeviceSensor::query()
-            ->get();
-
         $now = now();
 
-        $devices = $devices->map(function ($device) use ($now) {
+        /*
+         * Ambil data terbaru dari tabel sensor_data.
+         * Karena setiap sensor mengirim data berulang,
+         * ambil hanya record terbaru untuk masing-masing nama.
+         */
+        $records = SensorData::query()
+            ->orderByDesc('updated_at')
+            ->get()
+            ->unique('name')
+            ->values();
 
-            $data = $device->getAttributes();
+        $devices = $records->map(function ($device) use ($now) {
 
-            /*
-             * Support beberapa kemungkinan nama field.
-             */
-            $name =
-                $data['name']
-                ?? $data['device_name']
-                ?? $data['sensor_name']
-                ?? $data['code']
-                ?? 'Device #' . $device->id;
-
-            $latitude =
-                $data['latitude']
-                ?? $data['lat']
-                ?? null;
-
-            $longitude =
-                $data['longitude']
-                ?? $data['lng']
-                ?? $data['lon']
-                ?? null;
-
-            /*
-             * Status berdasarkan updated_at.
-             * <= 5 menit = ONLINE
-             */
             $updatedAt = $device->updated_at;
 
-            $online = $updatedAt
-                ? $updatedAt->greaterThanOrEqualTo($now->copy()->subMinutes(5))
-                : false;
+            /*
+             * Online jika status Online dan data
+             * diperbarui dalam 5 menit terakhir.
+             */
+            $online = (
+                strtolower((string) $device->status) === 'online'
+                && $updatedAt
+                && $updatedAt->greaterThanOrEqualTo(
+                    $now->copy()->subMinutes(10)
+                )
+            );
 
             return [
                 'id' => $device->id,
-                'name' => $name,
-                'latitude' => $latitude,
-                'longitude' => $longitude,
-                'online' => $online,
-                'updated_at' => $updatedAt?->format('d M Y H:i:s'),
+                'name' => $device->name ?? 'Device #' . $device->id,
+                'latitude' => $device->latitude,
+                'longitude' => $device->longitude,
+                'online' => (bool) $online,
+                'updated_at' => $updatedAt
+                    ? $updatedAt->format('d M Y H:i:s')
+                    : null,
             ];
         });
 
