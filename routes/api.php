@@ -13,12 +13,14 @@ use App\Http\Controllers\Sim800Controller;
 
 Route::get('/sim800/send', [Sim800Controller::class, 'send']);
 
+
 Route::get('/user', function (Request $request) {
     return $request->user();
 })->middleware('auth:sanctum');
 
 Route::post('/sensor-data', [SensorDataController::class, 'store']);
 Route::get('/sensor-data', [SensorDataController::class, 'index']);
+Route::get('/sensor-data/history', [SensorDataController::class, 'history']);
 
 Route::post('/upload-snapshot', [UploadSnapshotController::class, 'uploadSnapshot']);
 
